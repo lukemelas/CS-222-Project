@@ -1,4 +1,4 @@
-## CS 282 Project 
+## CS 222 Project 
 ### Learned Image Compression
 Resources
 * Image compression literature [overview](https://github.com/naganandy/graph-based-deep-learning-literature/tree/master/conference-journal-articles)

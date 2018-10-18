@@ -14,3 +14,5 @@ Learning Compressible Representations ([paper](https://arxiv.org/pdf/1704.00648.
 * Lossy Image Compression with Compressive Autoencoders ([paper](https://arxiv.org/pdf/1703.00395.pdf))
 * Generative Compression ([paper](https://arxiv.org/pdf/1703.01467.pdf))
 * Real-Time Adaptive Image Compression ([paper](https://arxiv.org/pdf/1705.05823.pdf))
+* Variable Rate Image Compression with Recurrent Neural Networks
+([paper](https://arxiv.org/pdf/1511.06085.pdf))

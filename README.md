@@ -16,3 +16,7 @@ Learning Compressible Representations ([paper](https://arxiv.org/pdf/1704.00648.
 * Real-Time Adaptive Image Compression ([paper](https://arxiv.org/pdf/1705.05823.pdf))
 * Variable Rate Image Compression with Recurrent Neural Networks
 ([paper](https://arxiv.org/pdf/1511.06085.pdf))
+Domain-Specific Papers
+* Compressing medical semantic segmentation image data ([paper](https://vcg.seas.harvard.edu/publications/compresso-efficient-compression-of-segmentation-data-for-connectomics), by Hanspeter Pfister here at Harvard)
+* NYU depth dataset [project page](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html)
+* Domain-specific video work by NVidia [paper](https://research.nvidia.com/publication/2018-02_Learning-Binary-Residual)

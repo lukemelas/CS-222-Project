@@ -21,3 +21,7 @@ Domain-Specific Papers
 * Compressing medical semantic segmentation image data ([paper](https://vcg.seas.harvard.edu/publications/compresso-efficient-compression-of-segmentation-data-for-connectomics), by Hanspeter Pfister here at Harvard)
 * NYU depth dataset [project page](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html)
 * Domain-specific video work by NVidia [paper](https://research.nvidia.com/publication/2018-02_Learning-Binary-Residual)
+
+RGB-D Datasets:
+* Building Parser (Stanford) (http://buildingparser.stanford.edu/)
+* T-Less (http://cmp.felk.cvut.cz/t-less/)

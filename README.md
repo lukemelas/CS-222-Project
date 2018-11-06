@@ -25,3 +25,6 @@ Domain-Specific Papers
 RGB-D Datasets:
 * Building Parser (Stanford) [Website](http://buildingparser.stanford.edu/)
 * T-Less [Website](http://cmp.felk.cvut.cz/t-less/)
+
+Bonus Material:
+* ADE20K [Link](http://groups.csail.mit.edu/vision/datasets/ADE20K/)

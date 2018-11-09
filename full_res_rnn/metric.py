@@ -1,26 +1,19 @@
-## some function borrowed from
-## https://github.com/tensorflow/models/blob/master/compression/image_encoder/msssim.py
-"""Python implementation of MS-SSIM.
-
-Usage:
-
-python msssim.py --original_image=original.png --compared_image=distorted.png
 """
+Python implementation of MS-SSIM. Usage:     
+    python msssim.py --original_image=original.png --compared_image=distorted.png
+These functions are borrowed from 
+    https://github.com/1zb/pytorch-image-comp-rnn/
+which borrowed from 
+    https://github.com/tensorflow/models/blob/master/compression/image_encoder/msssim.py
+so thanks tensorflow!
+"""
+
 import argparse
 
 import numpy as np
 from scipy import signal
 from scipy.ndimage.filters import convolve
 from PIL import Image
-
-parser = argparse.ArgumentParser()
-parser.add_argument('--metric', '-m', type=str, default='all', help='metric')
-parser.add_argument(
-    '--original-image', '-o', type=str, required=True, help='original image')
-parser.add_argument(
-    '--compared-image', '-c', type=str, required=True, help='compared image')
-args = parser.parse_args()
-
 
 def _FSpecialGauss(size, sigma):
     """Function to mimic the 'fspecial' gaussian MATLAB function."""
@@ -219,6 +212,8 @@ def psnr(original, compared):
 
 
 def main():
+    global args
+    assert args.metric in ['psnr', 'ssim']
     if args.metric != 'psnr':
         print(msssim(args.original_image, args.compared_image), end='')
     if args.metric != 'ssim':
@@ -226,4 +221,14 @@ def main():
 
 
 if __name__ == '__main__':
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--metric', '-m', type=str, default='all', 
+        help='metric: ssim or psnr')
+    parser.add_argument('--original-image', '-o', type=str, required=True, 
+        help='original image path')
+    parser.add_argument('--compared-image', '-c', type=str, required=True, 
+        help='compare image path')
+    args = parser.parse_args()
+
     main()

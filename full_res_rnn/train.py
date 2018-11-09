@@ -32,7 +32,7 @@ parser.add_argument('--workers', type=int, default=1,
 
 # Model
 parser.add_argument('--compression_iters', '-i', type=int, default=8, 
-        help='numer')
+        help='number of residual compression iterations')
 
 # Optimization
 parser.add_argument('--lr', type=float, default=5e-4, 
@@ -125,11 +125,12 @@ def main():
     if args.load_model_only:
         model.load_state_dict(torch.load(args.load_checkpoint))
     elif args.load_checkpoint:
-        checkpoint = torch.load(args.load_checkpoint) # dictionary
+        checkpoint = torch.load(args.load_checkpoint)
         encoder.load_state_dict(checkpoint['encoder'])
-        binarized.load_state_dict(checkpoint['binarizer'])
+        binarizer.load_state_dict(checkpoint['binarizer'])
         decoder.load_state_dict(checkpoint['decoder'])
         if args.load_optim:
+            checkpoint = torch.load(args.load_checkpoint) # dictionary
             if 'optimizer' in checkpoint:
                 optimizer.load_state_dict(checkpoint['optimizer'])
             if 'scheduler' in checkpoint:
@@ -178,8 +179,8 @@ def train(train_loader, encoder, binarizer, decoder, optimizer,
         data_time = time.time() - start_time
 
         # Create hidden states
-        e_hidden_states = encoder.create_hidden()
-        d_hidden_states = decoder.create_hidden()
+        e_hidden_states = encoder.create_hidden(args.batch_size, gpu=args.gpu)
+        d_hidden_states = decoder.create_hidden(args.batch_size, gpu=args.gpu)
 
         # Compress
         losses = []

@@ -1,4 +1,13 @@
 ################ CUSTOM ################
+*.pth
+*.pkl
+*.zip
+
+data/
+save
+luke_instructions.txt
+
+
 
 ################ CUSTOM ################
 

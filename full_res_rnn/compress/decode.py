@@ -6,7 +6,8 @@ from scipy.misc import imread, imresize, imsave
 
 import torch
 
-import network
+from models.network import EncoderCell, DecoderCell, Binarizer
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--model', required=True, type=str, 
@@ -35,10 +36,10 @@ def main():
     H, W = H*16, W*16
 
     # Model
-    decoder = network.DecoderCell()
+    decoder = DecoderCell()
     checkpoint = torch.load(args.checkpoint)['decoder']
     decoder.load_state_dict(checkpoint)
-    d_hidden_states = decoder.create_hidden(batch_size, gpu=args.gpu)
+    d_hidden_states = decoder.create_hidden(batch_size, gpu=args.gpu, grad=False)
 
     # GPU
     if args.gpu:
@@ -55,7 +56,7 @@ def main():
         # Decompress
         for i in args.compression_iters:
             d_out, d_hidden_states = decoder(codes[iters], d_hidden_states)
-            image = image + output.data.cpu()
+            image = image + d_out.data.cpu()
     
     # Save image
     fname = '{:02d}.png'.format(iters)

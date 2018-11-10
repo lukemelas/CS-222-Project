@@ -4,9 +4,8 @@ import numpy as np
 from scipy.misc import imread, imresize, imsave
 
 import torch
-from torch.autograd import Variable
 
-import network
+from models.network import EncoderCell, DecoderCell, Binarizer
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--model', required=True, type=str, 
@@ -33,9 +32,9 @@ def main():
     assert H % 32 == 0 and W % 32 == 0
     
     # Model
-    encoder = network.EncoderCell()
-    binarizer = network.Binarizer()
-    decoder = network.DecoderCell()
+    encoder = EncoderCell()
+    binarizer = Binarizer()
+    decoder = DecoderCell()
     checkpoint = torch.load(args.checkpoint)
     encoder.load_state_dict(checkpoint['encoder'])
     binarizer.load_state_dict(checkpoint['binarizer'])
@@ -47,9 +46,9 @@ def main():
         tmp = [x.cuda() for x in tmp]
         encoder, binarizer, decoder, image = tmp
 
-    # Hidden state
-    e_hidden_states = encoder.create_hidden(batch_size, gpu=args.gpu)
-    d_hidden_states = decoder.create_hidden(batch_size, gpu=args.gpu)
+    # Create hidden state
+    e_hidden_states = encoder.create_hidden(batch_size, gpu=args.gpu, grad=False)
+    d_hidden_states = decoder.create_hidden(batch_size, gpu=args.gpu, grad=False)
     
     # Block gradient
     encoder.eval()
@@ -64,8 +63,10 @@ def main():
             e_out, e_hidden_states = encoder(res, e_hidden_states)
             b_out = binarizer(e_out)
             d_out, d_hidden_states = decoder(b_out, d_hidden_states)
-        res = res - d_out 
-        codes.append(b_out.data.cpu().numpy())
+            res = res - d_out 
+            codes.append(b_out.data.cpu().numpy())
+            loss = res.data.abs().mean()
+            print('Iter: {:02d}  |  Loss: {:.06f}'.format(iters, loss))
 
         # Convert to bits and save
         codes = (np.stack(codes).astype(np.int8) + 1) // 2

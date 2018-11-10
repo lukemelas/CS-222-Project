@@ -4,8 +4,10 @@
 *.zip
 
 data/
-save
+save/
 luke_instructions.txt
+output/
+run.sh
 
 
 

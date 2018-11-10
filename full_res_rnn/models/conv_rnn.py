@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 from torch.nn.modules.utils import _pair
 
 class ConvLSTMCell(nn.Module):
@@ -14,7 +13,6 @@ class ConvLSTMCell(nn.Module):
                  hidden_kernel_size=1,
                  bias=True):
         super(ConvLSTMCell, self).__init__()
-        
         self.input_channels = input_channels
         self.hidden_channels = hidden_channels
 
@@ -24,10 +22,10 @@ class ConvLSTMCell(nn.Module):
         self.padding = _pair(padding)
         self.dilation = _pair(dilation)
         self.hidden_kernel_size = _pair(hidden_kernel_size)
-        
         hidden_padding = _pair(hidden_kernel_size // 2)
         gate_channels = 4 * self.hidden_channels
         
+        # Convolutions for input, hidden layer
         self.conv_ih = nn.Conv2d(
             in_channels=self.input_channels,
             out_channels=gate_channels,
@@ -36,7 +34,6 @@ class ConvLSTMCell(nn.Module):
             padding=self.padding,
             dilation=self.dilation,
             bias=bias)
-
         self.conv_hh = nn.Conv2d(
             in_channels=self.hidden_channels,
             out_channels=gate_channels,
@@ -54,17 +51,20 @@ class ConvLSTMCell(nn.Module):
 
     def forward(self, input, hidden):
         hx, cx = hidden
+
+        # Conv
         gates = self.conv_ih(input) + self.conv_hh(hx)
 
+        # LSTM
         ingate, forgetgate, cellgate, outgate = gates.chunk(4, 1)
-        ingate = F.sigmoid(ingate)
-        forgetgate = F.sigmoid(forgetgate)
-        cellgate = F.tanh(cellgate)
-        outgate = F.sigmoid(outgate)
+        ingate = torch.sigmoid(ingate)
+        forgetgate = torch.sigmoid(forgetgate)
+        cellgate = torch.tanh(cellgate)
+        outgate = torch.sigmoid(outgate)
 
+        # Output
         cy = (forgetgate * cx) + (ingate * cellgate)
-        hy = outgate * F.tanh(cy)
-
+        hy = outgate * torch.tanh(cy)
         return hy, cy
 
     def __repr__(self):

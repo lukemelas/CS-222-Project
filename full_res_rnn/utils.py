@@ -2,8 +2,11 @@ import os, time
 import numpy as np
 import torch
 
+# Tensorboard for logging
 try:
     import tensorflow as tf
+except:
+    tf = None
 
 
 def save_checkpoint(path, encoder, binarizer, decoder, 
@@ -26,5 +29,7 @@ def write_summary(writer, key, value, iteration):
     try: 
         summary = tf.Summary(value=[tf.Summary.Value(tag=key, simple_value=value)])
         writer.add_summary(summary, iteration)
+    except:
+        print('Error writing tf summary. Is tf installed?')
     return 
 

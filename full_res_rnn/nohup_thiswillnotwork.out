@@ -1,0 +1,3 @@
+ORIGINAL ARGS:   {'train_dir': 'data/coco-subset-train/', 'val_dir': 'data/coco-subset-val', 'gpu': 1, 'epochs': 200, 'batch_size': 4, 'workers': 1, 'compression_iters': 8, 'lr': 0.0005, 'load_checkpoint': None, 'load_optim': 1, 'load_model_only': 0, 'save_checkpoint': 'checkpoints', 'log_every': 128, 'tensorboard': None, 'num_val_images': -1, 'dir_save_images': 'output', 'num_save_images': 10}
+Using GPU
+Beginning training. Setup time: 6.05s

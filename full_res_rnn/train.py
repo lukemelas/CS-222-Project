@@ -4,6 +4,7 @@ import argparse
 import pdb
 
 import numpy as np
+import matplotlib.pyplot as plt
 
 import torch
 import torch.nn as nn
@@ -27,7 +28,7 @@ parser.add_argument('--gpu', type=int, default=1,
         help='use GPU if available')
 parser.add_argument('--epochs', '-e', type=int, default=200, 
         help='max number of epochs')
-parser.add_argument('--batch_size', '-N', type=int, default=32, 
+parser.add_argument('--batch_size', '-N', type=int, default=31, 
         help='batch size')
 parser.add_argument('--workers', type=int, default=1, 
         help='workers for data loading')
@@ -51,7 +52,7 @@ parser.add_argument('--load_model_only', type=int, default=0,
 # Checkpoint/logging
 parser.add_argument('--save_checkpoint', '-s', type=str, default='checkpoints', 
         help='directory to save checkpoints')
-parser.add_argument('--log_every', type=str, default=20,
+parser.add_argument('--log_every', type=int, default=20,
         help='how many iters between logging/printing')
 parser.add_argument('--tensorboard', '-w', type=str, default=None,
         help='tensorboard log directory')
@@ -89,13 +90,14 @@ def main():
     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
         std=[0.229, 0.224, 0.225])
     train_transform = transforms.Compose([
-        transforms.RandomResizedCrop(32),
+        #transforms.RandomResizedCrop(32),
+        transforms.Resize((32,32)),
         transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
         normalize,
     ])
     val_transform = transforms.Compose([
-        transforms.CenterCrop(32),
+        transforms.Resize((32,32)), #CenterCrop(32),
         transforms.ToTensor(),
         normalize,
     ])
@@ -168,7 +170,7 @@ def main():
     for epoch in range(epoch, args.epochs + 1):
 
         # Val
-        current_val = validate(val_loader, encoder, binarizer, decoder, args)
+        current_val = validate(val_loader, encoder, binarizer, decoder, args, epoch)
         scheduler.step(current_val)
 
         # Tensorboard 
@@ -180,9 +182,12 @@ def main():
         if current_val > best_val:
             best_val = current_val
             if args.save_checkpoint and args.save_checkpoint.lower() != 'none':
-                utils.save_checkpoint(args.save_checkpoint, encoder, binarizer, 
+                fname = 'checkpoint_e{:03d}_v{:.3f}'.format(epoch, best_val)
+                fname = os.path.join(args.save_checkpoint, fname)
+                utils.save_checkpoint(fname, encoder, binarizer, 
                         decoder, optimizer, scheduler, iteration, epoch)
             print('[Valid] ~ new best ~ ')
+        print()
 
         # Train
         iteration, epoch, loss = train(train_loader, encoder, binarizer, 
@@ -194,12 +199,13 @@ def train(train_loader, encoder, binarizer, decoder, optimizer,
     
     start_time = time.time()
     for i, (images, _) in enumerate(train_loader):
+        batch_size = images.shape[0]
         images = images.cuda() if args.gpu else images
         data_time = time.time() - start_time
 
         # Create hidden states
-        e_hidden_states = encoder.create_hidden(args.batch_size, gpu=args.gpu)
-        d_hidden_states = decoder.create_hidden(args.batch_size, gpu=args.gpu)
+        e_hidden_states = encoder.create_hidden(batch_size, gpu=args.gpu)
+        d_hidden_states = decoder.create_hidden(batch_size, gpu=args.gpu)
 
         # Compress
         losses = []
@@ -217,6 +223,7 @@ def train(train_loader, encoder, binarizer, decoder, optimizer,
         loss.backward()
         optimizer.step()
         compute_time = time.time() - data_time - start_time
+        loss = loss.item()
 
         # Log
         iteration += 1
@@ -243,9 +250,10 @@ def get_metrics(original, compared):
     return ssim, psnr
 
 
-def validate(val_loader, encoder, binarizer, decoder, args):
+def validate(val_loader, encoder, binarizer, decoder, args, epoch=None):
     '''Validate model'''
     start_time = time.time()
+    N = args.num_val_images if args.num_val_images > 0 else len(val_loader) * args.batch_size
     
     # Metrics
     num_images = 0
@@ -259,11 +267,12 @@ def validate(val_loader, encoder, binarizer, decoder, args):
         # Load images
         save_image_counter = 0
         for images, _ in val_loader:
+            batch_size = images.shape[0]
             images = images.cuda() if args.gpu else images
 
             # Create hidden states
-            e_hidden_states = encoder.create_hidden(args.batch_size, gpu=args.gpu)
-            d_hidden_states = decoder.create_hidden(args.batch_size, gpu=args.gpu)
+            e_hidden_states = encoder.create_hidden(batch_size, gpu=args.gpu)
+            d_hidden_states = decoder.create_hidden(batch_size, gpu=args.gpu)
 
             # Compress
             codes = []
@@ -290,17 +299,17 @@ def validate(val_loader, encoder, binarizer, decoder, args):
 
             # Save original/compressed images to file
             if save_image_counter < args.num_save_images: 
-                for orig, comp in zip(originals, compressed):
-                    orig_fname = 'orig_{:5d}.png'.format(save_image_counter)
-                    comp_fname = 'comp_{:5d}.png'.format(save_image_counter)
-                    plt.imsave(arr=orig, fname=orig_fname)
-                    plt.imsave(arr=comp, fname=comp_fname)
+                for orig, comp in zip(images, images_decoded):
+                    orig_fname = 'orig_{:05d}'.format(save_image_counter)
+                    comp_fname = 'comp_{:05d}'.format(save_image_counter)
+                    utils.save_image(orig, orig_fname, args, epoch=epoch)
+                    utils.save_image(comp, comp_fname, args, epoch=epoch)
                     save_image_counter += 1
                     if save_image_counter >= args.num_save_images: 
                         break
 
             # End validation
-            if num_images >= args.num_val_images:
+            if args.num_val_images >= 0 and num_images >= args.num_val_images:
                 break
 
             if num_images % args.log_every == 0:
@@ -308,19 +317,19 @@ def validate(val_loader, encoder, binarizer, decoder, args):
                        '| Loss {l:10.4f} '
                        '| SSIM {s:8.3f} '
                        '| PSNR {p:8.3f} '
-                       '| Time {t:6.2f})').format(
-                          n=num_images, N=args.num_val_images,
+                       '| Time {t:6.2f}').format(
+                          n=num_images, N=N,
                           l=loss_total/num_images, s=ssim_total/num_images,
-                          p=psnr_total/num_images, t=start_time - time.time()))
+                          p=psnr_total/num_images, t=time.time() - start_time))
 
         print(('[Valid] | Done [{n:4d}/{N:4d}] '
                '| Loss {l:10.4f} '
                '| SSIM {s:8.3f} '
                '| PSNR {p:8.3f} '
-               '| Time {t:6.2f})').format(
-                  n=num_images, N=args.num_val_images,
+               '| Time {t:6.2f}').format(
+                  n=num_images, N=N,
                   l=loss_total/num_images, s=ssim_total/num_images,
-                  p=psnr_total/num_images, t=start_time - time.time()))
+                  p=psnr_total/num_images, t=time.time() - start_time))
 
     return ssim_total / num_images
 

@@ -75,7 +75,7 @@ def main():
     # GPU 
     args.gpu = torch.cuda.is_available() and args.gpu
     if args.gpu:
-        print('Using GPU')
+        print('Using 1 GPU')
 
     # Log directory
     if args.tensorboard:

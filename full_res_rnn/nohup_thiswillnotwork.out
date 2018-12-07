@@ -1,3 +1,930 @@
 ORIGINAL ARGS:   {'train_dir': 'data/coco-subset-train/', 'val_dir': 'data/coco-subset-val', 'gpu': 1, 'epochs': 200, 'batch_size': 4, 'workers': 1, 'compression_iters': 8, 'lr': 0.0005, 'load_checkpoint': None, 'load_optim': 1, 'load_model_only': 0, 'save_checkpoint': 'checkpoints', 'log_every': 128, 'tensorboard': None, 'num_val_images': -1, 'dir_save_images': 'output', 'num_save_images': 10}
 Using GPU
 Beginning training. Setup time: 6.05s
+[Valid] | Iter [ 128/ 136] | Loss     0.2283 | SSIM    0.247 | PSNR   11.876 | Time   6.11
+[Valid] | Done [ 133/ 136] | Loss     0.2341 | SSIM    0.252 | PSNR   12.138 | Time   6.44
+[Valid] ~ new best ~ 
+
+[Train] Epoch     0 | Iter    128 | Loss     0.7014 | Compute time     0.41 | Data time    55.38 
+[Train] Epoch     0 | Iter    256 | Loss     0.5780 | Compute time     0.41 | Data time   111.51 
+[Valid] | Iter [ 128/ 136] | Loss     0.1237 | SSIM    0.249 | PSNR   12.981 | Time   4.80
+[Valid] | Done [ 133/ 136] | Loss     0.1272 | SSIM    0.255 | PSNR   13.263 | Time   5.02
+[Valid] ~ new best ~ 
+
+[Train] Epoch     1 | Iter    384 | Loss     0.5983 | Compute time     0.39 | Data time    32.84 
+[Train] Epoch     1 | Iter    512 | Loss     0.5380 | Compute time     0.41 | Data time    89.73 
+[Valid] | Iter [ 128/ 136] | Loss     0.1139 | SSIM    0.250 | PSNR   13.129 | Time   5.25
+[Valid] | Done [ 133/ 136] | Loss     0.1170 | SSIM    0.255 | PSNR   13.416 | Time   5.49
+[Valid] ~ new best ~ 
+
+[Train] Epoch     2 | Iter    640 | Loss     0.5331 | Compute time     0.41 | Data time     9.52 
+[Train] Epoch     2 | Iter    768 | Loss     0.4127 | Compute time     0.41 | Data time    65.97 
+[Train] Epoch     2 | Iter    896 | Loss     0.5674 | Compute time     0.42 | Data time   122.17 
+[Valid] | Iter [ 128/ 136] | Loss     0.1053 | SSIM    0.250 | PSNR   13.274 | Time   5.05
+[Valid] | Done [ 133/ 136] | Loss     0.1083 | SSIM    0.255 | PSNR   13.564 | Time   5.30
+[Valid] ~ new best ~ 
+
+[Train] Epoch     3 | Iter   1024 | Loss     0.4217 | Compute time     0.41 | Data time    41.91 
+[Train] Epoch     3 | Iter   1152 | Loss     0.5161 | Compute time     0.41 | Data time    98.17 
+[Valid] | Iter [ 128/ 136] | Loss     0.1052 | SSIM    0.250 | PSNR   13.282 | Time   4.75
+[Valid] | Done [ 133/ 136] | Loss     0.1084 | SSIM    0.255 | PSNR   13.567 | Time   4.98
+
+[Train] Epoch     4 | Iter   1280 | Loss     0.5282 | Compute time     0.47 | Data time    19.71 
+[Train] Epoch     4 | Iter   1408 | Loss     0.5288 | Compute time     0.41 | Data time    75.90 
+[Train] Epoch     4 | Iter   1536 | Loss     0.4824 | Compute time     0.39 | Data time   132.15 
+[Valid] | Iter [ 128/ 136] | Loss     0.1020 | SSIM    0.250 | PSNR   13.345 | Time   5.06
+[Valid] | Done [ 133/ 136] | Loss     0.1050 | SSIM    0.255 | PSNR   13.634 | Time   5.30
+[Valid] ~ new best ~ 
+
+[Train] Epoch     5 | Iter   1664 | Loss     0.4989 | Compute time     0.47 | Data time    52.51 
+[Train] Epoch     5 | Iter   1792 | Loss     0.5360 | Compute time     0.40 | Data time   109.82 
+[Valid] | Iter [ 128/ 136] | Loss     0.0993 | SSIM    0.250 | PSNR   13.395 | Time   4.73
+[Valid] | Done [ 133/ 136] | Loss     0.1028 | SSIM    0.255 | PSNR   13.676 | Time   4.95
+[Valid] ~ new best ~ 
+
+[Train] Epoch     6 | Iter   1920 | Loss     0.6130 | Compute time     0.40 | Data time    28.51 
+[Train] Epoch     6 | Iter   2048 | Loss     0.5097 | Compute time     0.47 | Data time    85.12 
+[Valid] | Iter [ 128/ 136] | Loss     0.0963 | SSIM    0.250 | PSNR   13.451 | Time   4.75
+[Valid] | Done [ 133/ 136] | Loss     0.0993 | SSIM    0.255 | PSNR   13.741 | Time   4.98
+[Valid] ~ new best ~ 
+
+[Train] Epoch     7 | Iter   2176 | Loss     0.5215 | Compute time     0.41 | Data time     5.42 
+[Train] Epoch     7 | Iter   2304 | Loss     0.3780 | Compute time     0.41 | Data time    62.18 
+[Train] Epoch     7 | Iter   2432 | Loss     0.4101 | Compute time     0.41 | Data time   118.61 
+[Valid] | Iter [ 128/ 136] | Loss     0.0952 | SSIM    0.250 | PSNR   13.467 | Time   4.94
+[Valid] | Done [ 133/ 136] | Loss     0.0983 | SSIM    0.255 | PSNR   13.755 | Time   5.16
+[Valid] ~ new best ~ 
+
+[Train] Epoch     8 | Iter   2560 | Loss     0.4490 | Compute time     0.41 | Data time    38.17 
+[Train] Epoch     8 | Iter   2688 | Loss     0.6167 | Compute time     0.41 | Data time    94.59 
+[Valid] | Iter [ 128/ 136] | Loss     0.0960 | SSIM    0.250 | PSNR   13.444 | Time   5.01
+[Valid] | Done [ 133/ 136] | Loss     0.0991 | SSIM    0.255 | PSNR   13.732 | Time   5.27
+
+[Train] Epoch     9 | Iter   2816 | Loss     0.5159 | Compute time     0.41 | Data time    15.10 
+[Train] Epoch     9 | Iter   2944 | Loss     0.5956 | Compute time     0.50 | Data time    71.56 
+[Train] Epoch     9 | Iter   3072 | Loss     0.4140 | Compute time     0.41 | Data time   127.97 
+[Valid] | Iter [ 128/ 136] | Loss     0.0929 | SSIM    0.250 | PSNR   13.514 | Time   5.02
+[Valid] | Done [ 133/ 136] | Loss     0.0961 | SSIM    0.255 | PSNR   13.799 | Time   5.25
+[Valid] ~ new best ~ 
+
+[Train] Epoch    10 | Iter   3200 | Loss     0.4039 | Compute time     0.40 | Data time    48.01 
+[Train] Epoch    10 | Iter   3328 | Loss     0.4419 | Compute time     0.41 | Data time   103.45 
+[Valid] | Iter [ 128/ 136] | Loss     0.0928 | SSIM    0.250 | PSNR   13.507 | Time   4.74
+[Valid] | Done [ 133/ 136] | Loss     0.0959 | SSIM    0.255 | PSNR   13.793 | Time   4.97
+
+[Train] Epoch    11 | Iter   3456 | Loss     0.6441 | Compute time     0.41 | Data time    24.49 
+[Train] Epoch    11 | Iter   3584 | Loss     0.4591 | Compute time     0.40 | Data time    80.89 
+[Valid] | Iter [ 128/ 136] | Loss     0.0927 | SSIM    0.250 | PSNR   13.528 | Time   4.85
+[Valid] | Done [ 133/ 136] | Loss     0.0957 | SSIM    0.255 | PSNR   13.817 | Time   5.09
+[Valid] ~ new best ~ 
+
+[Train] Epoch    12 | Iter   3712 | Loss     0.4023 | Compute time     0.41 | Data time     1.35 
+[Train] Epoch    12 | Iter   3840 | Loss     0.4209 | Compute time     0.43 | Data time    57.75 
+[Train] Epoch    12 | Iter   3968 | Loss     0.3381 | Compute time     0.40 | Data time   114.27 
+[Valid] | Iter [ 128/ 136] | Loss     0.0897 | SSIM    0.250 | PSNR   13.583 | Time   4.88
+[Valid] | Done [ 133/ 136] | Loss     0.0926 | SSIM    0.255 | PSNR   13.873 | Time   5.11
+[Valid] ~ new best ~ 
+
+[Train] Epoch    13 | Iter   4096 | Loss     0.5414 | Compute time     0.47 | Data time    34.61 
+[Train] Epoch    13 | Iter   4224 | Loss     0.4234 | Compute time     0.42 | Data time    91.97 
+[Valid] | Iter [ 128/ 136] | Loss     0.0893 | SSIM    0.250 | PSNR   13.591 | Time   5.33
+[Valid] | Done [ 133/ 136] | Loss     0.0924 | SSIM    0.255 | PSNR   13.879 | Time   5.58
+[Valid] ~ new best ~ 
+
+[Train] Epoch    14 | Iter   4352 | Loss     0.4154 | Compute time     0.48 | Data time    11.02 
+[Train] Epoch    14 | Iter   4480 | Loss     0.4929 | Compute time     0.41 | Data time    67.39 
+[Train] Epoch    14 | Iter   4608 | Loss     0.4633 | Compute time     0.41 | Data time   123.87 
+[Valid] | Iter [ 128/ 136] | Loss     0.0904 | SSIM    0.250 | PSNR   13.571 | Time   5.00
+[Valid] | Done [ 133/ 136] | Loss     0.0936 | SSIM    0.255 | PSNR   13.854 | Time   5.23
+
+[Train] Epoch    15 | Iter   4736 | Loss     0.4921 | Compute time     0.41 | Data time    44.32 
+[Train] Epoch    15 | Iter   4864 | Loss     0.4465 | Compute time     0.41 | Data time   100.32 
+[Valid] | Iter [ 128/ 136] | Loss     0.0875 | SSIM    0.250 | PSNR   13.629 | Time   4.82
+[Valid] | Done [ 133/ 136] | Loss     0.0905 | SSIM    0.255 | PSNR   13.919 | Time   5.04
+[Valid] ~ new best ~ 
+
+[Train] Epoch    16 | Iter   4992 | Loss     0.4745 | Compute time     0.41 | Data time    20.54 
+[Train] Epoch    16 | Iter   5120 | Loss     0.3474 | Compute time     0.40 | Data time    76.47 
+[Train] Epoch    16 | Iter   5248 | Loss     0.3362 | Compute time     0.43 | Data time   133.02 
+[Valid] | Iter [ 128/ 136] | Loss     0.0858 | SSIM    0.250 | PSNR   13.665 | Time   5.12
+[Valid] | Done [ 133/ 136] | Loss     0.0887 | SSIM    0.255 | PSNR   13.953 | Time   5.35
+[Valid] ~ new best ~ 
+
+[Train] Epoch    17 | Iter   5376 | Loss     0.4123 | Compute time     0.39 | Data time    53.95 
+[Train] Epoch    17 | Iter   5504 | Loss     0.3900 | Compute time     0.42 | Data time   110.52 
+[Valid] | Iter [ 128/ 136] | Loss     0.0845 | SSIM    0.250 | PSNR   13.698 | Time   5.39
+[Valid] | Done [ 133/ 136] | Loss     0.0875 | SSIM    0.255 | PSNR   13.989 | Time   5.64
+[Valid] ~ new best ~ 
+
+[Train] Epoch    18 | Iter   5632 | Loss     0.5142 | Compute time     0.41 | Data time    30.45 
+[Train] Epoch    18 | Iter   5760 | Loss     0.4804 | Compute time     0.40 | Data time    86.35 
+[Valid] | Iter [ 128/ 136] | Loss     0.0833 | SSIM    0.250 | PSNR   13.720 | Time   5.42
+[Valid] | Done [ 133/ 136] | Loss     0.0861 | SSIM    0.255 | PSNR   14.012 | Time   5.67
+[Valid] ~ new best ~ 
+
+[Train] Epoch    19 | Iter   5888 | Loss     0.4823 | Compute time     0.41 | Data time     7.00 
+[Train] Epoch    19 | Iter   6016 | Loss     0.4142 | Compute time     0.41 | Data time    63.32 
+[Train] Epoch    19 | Iter   6144 | Loss     0.4664 | Compute time     0.41 | Data time   119.38 
+[Valid] | Iter [ 128/ 136] | Loss     0.0818 | SSIM    0.250 | PSNR   13.760 | Time   5.60
+[Valid] | Done [ 133/ 136] | Loss     0.0845 | SSIM    0.255 | PSNR   14.053 | Time   5.87
+[Valid] ~ new best ~ 
+
+[Train] Epoch    20 | Iter   6272 | Loss     0.4453 | Compute time     0.41 | Data time    39.75 
+[Train] Epoch    20 | Iter   6400 | Loss     0.4347 | Compute time     0.41 | Data time    95.87 
+[Valid] | Iter [ 128/ 136] | Loss     0.0932 | SSIM    0.250 | PSNR   13.515 | Time   4.93
+[Valid] | Done [ 133/ 136] | Loss     0.0963 | SSIM    0.255 | PSNR   13.801 | Time   5.17
+
+[Train] Epoch    21 | Iter   6528 | Loss     0.3857 | Compute time     0.47 | Data time    17.24 
+[Train] Epoch    21 | Iter   6656 | Loss     0.4515 | Compute time     0.40 | Data time    72.75 
+[Train] Epoch    21 | Iter   6784 | Loss     0.4271 | Compute time     0.43 | Data time   128.75 
+[Valid] | Iter [ 128/ 136] | Loss     0.0808 | SSIM    0.250 | PSNR   13.783 | Time   4.90
+[Valid] | Done [ 133/ 136] | Loss     0.0835 | SSIM    0.255 | PSNR   14.075 | Time   5.14
+[Valid] ~ new best ~ 
+
+[Train] Epoch    22 | Iter   6912 | Loss     0.4364 | Compute time     0.41 | Data time    49.57 
+[Train] Epoch    22 | Iter   7040 | Loss     0.4814 | Compute time     0.41 | Data time   106.94 
+[Valid] | Iter [ 128/ 136] | Loss     0.0785 | SSIM    0.250 | PSNR   13.851 | Time   5.03
+[Valid] | Done [ 133/ 136] | Loss     0.0811 | SSIM    0.255 | PSNR   14.144 | Time   5.32
+[Valid] ~ new best ~ 
+
+[Train] Epoch    23 | Iter   7168 | Loss     0.3342 | Compute time     0.42 | Data time    26.87 
+[Train] Epoch    23 | Iter   7296 | Loss     0.4124 | Compute time     0.42 | Data time    82.80 
+[Valid] | Iter [ 128/ 136] | Loss     0.0786 | SSIM    0.250 | PSNR   13.848 | Time   4.90
+[Valid] | Done [ 133/ 136] | Loss     0.0815 | SSIM    0.255 | PSNR   14.137 | Time   5.13
+
+[Train] Epoch    24 | Iter   7424 | Loss     0.3982 | Compute time     0.40 | Data time     3.14 
+[Train] Epoch    24 | Iter   7552 | Loss     0.4354 | Compute time     0.41 | Data time    59.11 
+[Train] Epoch    24 | Iter   7680 | Loss     0.3473 | Compute time     0.41 | Data time   115.60 
+[Valid] | Iter [ 128/ 136] | Loss     0.0775 | SSIM    0.250 | PSNR   13.877 | Time   5.00
+[Valid] | Done [ 133/ 136] | Loss     0.0802 | SSIM    0.255 | PSNR   14.170 | Time   5.25
+[Valid] ~ new best ~ 
+
+[Train] Epoch    25 | Iter   7808 | Loss     0.4726 | Compute time     0.40 | Data time    36.28 
+[Train] Epoch    25 | Iter   7936 | Loss     0.3922 | Compute time     0.40 | Data time    92.33 
+[Valid] | Iter [ 128/ 136] | Loss     0.0762 | SSIM    0.250 | PSNR   13.906 | Time   4.92
+[Valid] | Done [ 133/ 136] | Loss     0.0789 | SSIM    0.255 | PSNR   14.199 | Time   5.17
+[Valid] ~ new best ~ 
+
+[Train] Epoch    26 | Iter   8064 | Loss     0.4320 | Compute time     0.51 | Data time    12.62 
+[Train] Epoch    26 | Iter   8192 | Loss     0.5377 | Compute time     0.48 | Data time    69.25 
+[Train] Epoch    26 | Iter   8320 | Loss     0.4137 | Compute time     0.41 | Data time   125.82 
+[Valid] | Iter [ 128/ 136] | Loss     0.0764 | SSIM    0.250 | PSNR   13.900 | Time   5.05
+[Valid] | Done [ 133/ 136] | Loss     0.0791 | SSIM    0.255 | PSNR   14.192 | Time   5.28
+
+[Train] Epoch    27 | Iter   8448 | Loss     0.3930 | Compute time     0.45 | Data time    46.05 
+[Train] Epoch    27 | Iter   8576 | Loss     0.3592 | Compute time     0.40 | Data time   102.68 
+[Valid] | Iter [ 128/ 136] | Loss     0.0756 | SSIM    0.250 | PSNR   13.919 | Time   4.91
+[Valid] | Done [ 133/ 136] | Loss     0.0785 | SSIM    0.255 | PSNR   14.209 | Time   5.23
+
+[Train] Epoch    28 | Iter   8704 | Loss     0.5127 | Compute time     0.40 | Data time    22.96 
+[Train] Epoch    28 | Iter   8832 | Loss     0.2834 | Compute time     0.47 | Data time    79.55 
+[Train] Epoch    28 | Iter   8960 | Loss     0.3522 | Compute time     0.40 | Data time   135.97 
+[Valid] | Iter [ 128/ 136] | Loss     0.0746 | SSIM    0.250 | PSNR   13.954 | Time   4.84
+[Valid] | Done [ 133/ 136] | Loss     0.0772 | SSIM    0.255 | PSNR   14.248 | Time   5.08
+[Valid] ~ new best ~ 
+
+[Train] Epoch    29 | Iter   9088 | Loss     0.4491 | Compute time     0.41 | Data time    55.51 
+[Train] Epoch    29 | Iter   9216 | Loss     0.4563 | Compute time     0.41 | Data time   111.26 
+[Valid] | Iter [ 128/ 136] | Loss     0.0746 | SSIM    0.250 | PSNR   13.947 | Time   4.86
+[Valid] | Done [ 133/ 136] | Loss     0.0772 | SSIM    0.255 | PSNR   14.243 | Time   5.08
+
+[Train] Epoch    30 | Iter   9344 | Loss     0.4144 | Compute time     0.46 | Data time    32.33 
+[Train] Epoch    30 | Iter   9472 | Loss     0.3896 | Compute time     0.41 | Data time    88.30 
+[Valid] | Iter [ 128/ 136] | Loss     0.0745 | SSIM    0.250 | PSNR   13.946 | Time   5.02
+[Valid] | Done [ 133/ 136] | Loss     0.0772 | SSIM    0.255 | PSNR   14.237 | Time   5.26
+
+[Train] Epoch    31 | Iter   9600 | Loss     0.3911 | Compute time     0.41 | Data time     9.14 
+[Train] Epoch    31 | Iter   9728 | Loss     0.2987 | Compute time     0.40 | Data time    65.29 
+[Train] Epoch    31 | Iter   9856 | Loss     0.4173 | Compute time     0.43 | Data time   121.60 
+[Valid] | Iter [ 128/ 136] | Loss     0.0734 | SSIM    0.250 | PSNR   13.977 | Time   4.91
+[Valid] | Done [ 133/ 136] | Loss     0.0763 | SSIM    0.255 | PSNR   14.268 | Time   5.13
+[Valid] ~ new best ~ 
+
+[Train] Epoch    32 | Iter   9984 | Loss     0.3735 | Compute time     0.40 | Data time    42.07 
+[Train] Epoch    32 | Iter  10112 | Loss     0.4600 | Compute time     0.42 | Data time    98.49 
+[Valid] | Iter [ 128/ 136] | Loss     0.0727 | SSIM    0.250 | PSNR   13.995 | Time   4.89
+[Valid] | Done [ 133/ 136] | Loss     0.0753 | SSIM    0.255 | PSNR   14.290 | Time   5.14
+
+[Train] Epoch    33 | Iter  10240 | Loss     0.4098 | Compute time     0.41 | Data time    18.70 
+[Train] Epoch    33 | Iter  10368 | Loss     0.2919 | Compute time     0.42 | Data time    74.88 
+[Train] Epoch    33 | Iter  10496 | Loss     0.3879 | Compute time     0.41 | Data time   131.54 
+[Valid] | Iter [ 128/ 136] | Loss     0.0726 | SSIM    0.250 | PSNR   14.003 | Time   5.26
+[Valid] | Done [ 133/ 136] | Loss     0.0752 | SSIM    0.255 | PSNR   14.298 | Time   5.50
+
+[Train] Epoch    34 | Iter  10624 | Loss     0.3686 | Compute time     0.42 | Data time    52.24 
+[Train] Epoch    34 | Iter  10752 | Loss     0.3456 | Compute time     0.40 | Data time   108.88 
+[Valid] | Iter [ 128/ 136] | Loss     0.0726 | SSIM    0.250 | PSNR   13.984 | Time   5.10
+[Valid] | Done [ 133/ 136] | Loss     0.0755 | SSIM    0.255 | PSNR   14.274 | Time   5.34
+
+[Train] Epoch    35 | Iter  10880 | Loss     0.4128 | Compute time     0.48 | Data time    28.20 
+[Train] Epoch    35 | Iter  11008 | Loss     0.4413 | Compute time     0.41 | Data time    84.33 
+[Valid] | Iter [ 128/ 136] | Loss     0.0725 | SSIM    0.250 | PSNR   13.996 | Time   5.42
+[Valid] | Done [ 133/ 136] | Loss     0.0752 | SSIM    0.255 | PSNR   14.289 | Time   5.67
+
+[Train] Epoch    36 | Iter  11136 | Loss     0.4184 | Compute time     0.41 | Data time     4.94 
+[Train] Epoch    36 | Iter  11264 | Loss     0.2952 | Compute time     0.42 | Data time    61.06 
+[Train] Epoch    36 | Iter  11392 | Loss     0.3694 | Compute time     0.47 | Data time   117.36 
+[Valid] | Iter [ 128/ 136] | Loss     0.0714 | SSIM    0.250 | PSNR   14.019 | Time   4.87
+[Valid] | Done [ 133/ 136] | Loss     0.0741 | SSIM    0.255 | PSNR   14.314 | Time   5.11
+[Valid] ~ new best ~ 
+
+[Train] Epoch    37 | Iter  11520 | Loss     0.3225 | Compute time     0.46 | Data time    37.43 
+[Train] Epoch    37 | Iter  11648 | Loss     0.4078 | Compute time     0.40 | Data time    94.44 
+[Valid] | Iter [ 128/ 136] | Loss     0.0705 | SSIM    0.250 | PSNR   14.032 | Time   5.70
+[Valid] | Done [ 133/ 136] | Loss     0.0732 | SSIM    0.255 | PSNR   14.326 | Time   5.97
+[Valid] ~ new best ~ 
+
+[Train] Epoch    38 | Iter  11776 | Loss     0.3205 | Compute time     0.41 | Data time    14.79 
+[Train] Epoch    38 | Iter  11904 | Loss     0.3586 | Compute time     0.41 | Data time    71.18 
+[Train] Epoch    38 | Iter  12032 | Loss     0.3583 | Compute time     0.41 | Data time   128.24 
+[Valid] | Iter [ 128/ 136] | Loss     0.0706 | SSIM    0.250 | PSNR   14.038 | Time   5.16
+[Valid] | Done [ 133/ 136] | Loss     0.0733 | SSIM    0.255 | PSNR   14.331 | Time   5.51
+[Valid] ~ new best ~ 
+
+[Train] Epoch    39 | Iter  12160 | Loss     0.4014 | Compute time     0.41 | Data time    48.42 
+[Train] Epoch    39 | Iter  12288 | Loss     0.3861 | Compute time     0.41 | Data time   104.39 
+[Valid] | Iter [ 128/ 136] | Loss     0.0710 | SSIM    0.250 | PSNR   14.030 | Time   5.07
+[Valid] | Done [ 133/ 136] | Loss     0.0735 | SSIM    0.255 | PSNR   14.326 | Time   5.31
+
+[Train] Epoch    40 | Iter  12416 | Loss     0.3451 | Compute time     0.40 | Data time    24.67 
+[Train] Epoch    40 | Iter  12544 | Loss     0.4022 | Compute time     0.41 | Data time    80.63 
+[Valid] | Iter [ 128/ 136] | Loss     0.0707 | SSIM    0.250 | PSNR   14.025 | Time   4.88
+[Valid] | Done [ 133/ 136] | Loss     0.0733 | SSIM    0.255 | PSNR   14.321 | Time   5.12
+[Valid] ~ new best ~ 
+
+[Train] Epoch    41 | Iter  12672 | Loss     0.3766 | Compute time     0.43 | Data time     0.93 
+[Train] Epoch    41 | Iter  12800 | Loss     0.4321 | Compute time     0.41 | Data time    57.61 
+[Train] Epoch    41 | Iter  12928 | Loss     0.3240 | Compute time     0.47 | Data time   114.39 
+[Valid] | Iter [ 128/ 136] | Loss     0.0703 | SSIM    0.250 | PSNR   14.042 | Time   4.82
+[Valid] | Done [ 133/ 136] | Loss     0.0731 | SSIM    0.255 | PSNR   14.334 | Time   5.04
+
+[Train] Epoch    42 | Iter  13056 | Loss     0.3330 | Compute time     0.41 | Data time    33.96 
+[Train] Epoch    42 | Iter  13184 | Loss     0.3517 | Compute time     0.41 | Data time    90.44 
+[Valid] | Iter [ 128/ 136] | Loss     0.0699 | SSIM    0.250 | PSNR   14.053 | Time   5.34
+[Valid] | Done [ 133/ 136] | Loss     0.0726 | SSIM    0.255 | PSNR   14.345 | Time   5.58
+[Valid] ~ new best ~ 
+
+[Train] Epoch    43 | Iter  13312 | Loss     0.3363 | Compute time     0.41 | Data time    10.83 
+[Train] Epoch    43 | Iter  13440 | Loss     0.3952 | Compute time     0.41 | Data time    67.68 
+[Train] Epoch    43 | Iter  13568 | Loss     0.3218 | Compute time     0.40 | Data time   123.68 
+[Valid] | Iter [ 128/ 136] | Loss     0.0704 | SSIM    0.250 | PSNR   14.037 | Time   5.13
+[Valid] | Done [ 133/ 136] | Loss     0.0729 | SSIM    0.255 | PSNR   14.332 | Time   5.38
+
+[Train] Epoch    44 | Iter  13696 | Loss     0.4292 | Compute time     0.41 | Data time    43.75 
+[Train] Epoch    44 | Iter  13824 | Loss     0.3213 | Compute time     0.41 | Data time   100.52 
+[Valid] | Iter [ 128/ 136] | Loss     0.0704 | SSIM    0.250 | PSNR   14.035 | Time   5.09
+[Valid] | Done [ 133/ 136] | Loss     0.0731 | SSIM    0.255 | PSNR   14.329 | Time   5.34
+
+[Train] Epoch    45 | Iter  13952 | Loss     0.3495 | Compute time     0.41 | Data time    20.37 
+[Train] Epoch    45 | Iter  14080 | Loss     0.4313 | Compute time     0.40 | Data time    76.43 
+[Train] Epoch    45 | Iter  14208 | Loss     0.3747 | Compute time     0.40 | Data time   132.93 
+[Valid] | Iter [ 128/ 136] | Loss     0.0699 | SSIM    0.250 | PSNR   14.055 | Time   5.02
+[Valid] | Done [ 133/ 136] | Loss     0.0724 | SSIM    0.255 | PSNR   14.350 | Time   5.27
+
+[Train] Epoch    46 | Iter  14336 | Loss     0.3740 | Compute time     0.41 | Data time    53.40 
+[Train] Epoch    46 | Iter  14464 | Loss     0.3218 | Compute time     0.41 | Data time   110.24 
+[Valid] | Iter [ 128/ 136] | Loss     0.0698 | SSIM    0.250 | PSNR   14.055 | Time   4.81
+[Valid] | Done [ 133/ 136] | Loss     0.0724 | SSIM    0.255 | PSNR   14.348 | Time   5.03
+
+[Train] Epoch    47 | Iter  14592 | Loss     0.4408 | Compute time     0.41 | Data time    30.18 
+[Train] Epoch    47 | Iter  14720 | Loss     0.3469 | Compute time     0.43 | Data time    87.79 
+[Valid] | Iter [ 128/ 136] | Loss     0.0692 | SSIM    0.250 | PSNR   14.076 | Time   5.35
+[Valid] | Done [ 133/ 136] | Loss     0.0718 | SSIM    0.255 | PSNR   14.371 | Time   5.59
+
+[Train] Epoch    48 | Iter  14848 | Loss     0.3666 | Compute time     0.41 | Data time     6.86 
+[Train] Epoch    48 | Iter  14976 | Loss     0.3624 | Compute time     0.41 | Data time    63.30 
+[Train] Epoch    48 | Iter  15104 | Loss     0.3496 | Compute time     0.48 | Data time   119.65 
+[Valid] | Iter [ 128/ 136] | Loss     0.0689 | SSIM    0.250 | PSNR   14.075 | Time   4.86
+[Valid] | Done [ 133/ 136] | Loss     0.0715 | SSIM    0.255 | PSNR   14.371 | Time   5.09
+[Valid] ~ new best ~ 
+
+[Train] Epoch    49 | Iter  15232 | Loss     0.3839 | Compute time     0.45 | Data time    39.23 
+[Train] Epoch    49 | Iter  15360 | Loss     0.4013 | Compute time     0.48 | Data time    95.70 
+[Valid] | Iter [ 128/ 136] | Loss     0.0698 | SSIM    0.250 | PSNR   14.041 | Time   4.93
+[Valid] | Done [ 133/ 136] | Loss     0.0723 | SSIM    0.255 | PSNR   14.340 | Time   5.16
+
+[Train] Epoch    50 | Iter  15488 | Loss     0.3657 | Compute time     0.45 | Data time    16.45 
+[Train] Epoch    50 | Iter  15616 | Loss     0.4255 | Compute time     0.41 | Data time    72.83 
+[Train] Epoch    50 | Iter  15744 | Loss     0.4100 | Compute time     0.46 | Data time   129.49 
+[Valid] | Iter [ 128/ 136] | Loss     0.0685 | SSIM    0.250 | PSNR   14.083 | Time   4.93
+[Valid] | Done [ 133/ 136] | Loss     0.0710 | SSIM    0.255 | PSNR   14.379 | Time   5.17
+[Valid] ~ new best ~ 
+
+[Train] Epoch    51 | Iter  15872 | Loss     0.3356 | Compute time     0.47 | Data time    49.13 
+[Train] Epoch    51 | Iter  16000 | Loss     0.3959 | Compute time     0.43 | Data time   105.13 
+[Valid] | Iter [ 128/ 136] | Loss     0.0691 | SSIM    0.250 | PSNR   14.073 | Time   5.05
+[Valid] | Done [ 133/ 136] | Loss     0.0716 | SSIM    0.255 | PSNR   14.370 | Time   5.28
+
+[Train] Epoch    52 | Iter  16128 | Loss     0.3979 | Compute time     0.41 | Data time    26.21 
+[Train] Epoch    52 | Iter  16256 | Loss     0.3482 | Compute time     0.41 | Data time    82.79 
+[Valid] | Iter [ 128/ 136] | Loss     0.0690 | SSIM    0.250 | PSNR   14.079 | Time   5.18
+[Valid] | Done [ 133/ 136] | Loss     0.0715 | SSIM    0.255 | PSNR   14.375 | Time   5.42
+
+[Train] Epoch    53 | Iter  16384 | Loss     0.4095 | Compute time     0.49 | Data time     2.86 
+[Train] Epoch    53 | Iter  16512 | Loss     0.3002 | Compute time     0.41 | Data time    60.09 
+[Train] Epoch    53 | Iter  16640 | Loss     0.3345 | Compute time     0.41 | Data time   116.42 
+[Valid] | Iter [ 128/ 136] | Loss     0.0683 | SSIM    0.250 | PSNR   14.096 | Time   4.96
+[Valid] | Done [ 133/ 136] | Loss     0.0708 | SSIM    0.255 | PSNR   14.393 | Time   5.20
+[Valid] ~ new best ~ 
+
+[Train] Epoch    54 | Iter  16768 | Loss     0.3863 | Compute time     0.42 | Data time    35.79 
+[Train] Epoch    54 | Iter  16896 | Loss     0.3157 | Compute time     0.41 | Data time    92.49 
+[Valid] | Iter [ 128/ 136] | Loss     0.0676 | SSIM    0.250 | PSNR   14.110 | Time   5.63
+[Valid] | Done [ 133/ 136] | Loss     0.0702 | SSIM    0.255 | PSNR   14.406 | Time   5.89
+[Valid] ~ new best ~ 
+
+[Train] Epoch    55 | Iter  17024 | Loss     0.4253 | Compute time     0.41 | Data time    12.30 
+[Train] Epoch    55 | Iter  17152 | Loss     0.4189 | Compute time     0.41 | Data time    69.26 
+[Train] Epoch    55 | Iter  17280 | Loss     0.3477 | Compute time     0.43 | Data time   125.85 
+[Valid] | Iter [ 128/ 136] | Loss     0.0675 | SSIM    0.250 | PSNR   14.111 | Time   4.87
+[Valid] | Done [ 133/ 136] | Loss     0.0700 | SSIM    0.255 | PSNR   14.407 | Time   5.10
+
+[Train] Epoch    56 | Iter  17408 | Loss     0.3381 | Compute time     0.42 | Data time    44.84 
+[Train] Epoch    56 | Iter  17536 | Loss     0.2483 | Compute time     0.41 | Data time   100.97 
+[Valid] | Iter [ 128/ 136] | Loss     0.0681 | SSIM    0.250 | PSNR   14.099 | Time   4.92
+[Valid] | Done [ 133/ 136] | Loss     0.0705 | SSIM    0.255 | PSNR   14.398 | Time   5.16
+
+[Train] Epoch    57 | Iter  17664 | Loss     0.3602 | Compute time     0.41 | Data time    22.13 
+[Train] Epoch    57 | Iter  17792 | Loss     0.3653 | Compute time     0.46 | Data time    79.39 
+[Train] Epoch    57 | Iter  17920 | Loss     0.3005 | Compute time     0.41 | Data time   135.93 
+[Valid] | Iter [ 128/ 136] | Loss     0.0671 | SSIM    0.250 | PSNR   14.128 | Time   5.18
+[Valid] | Done [ 133/ 136] | Loss     0.0697 | SSIM    0.255 | PSNR   14.421 | Time   5.41
+[Valid] ~ new best ~ 
+
+[Train] Epoch    58 | Iter  18048 | Loss     0.3832 | Compute time     0.41 | Data time    54.98 
+[Train] Epoch    58 | Iter  18176 | Loss     0.3614 | Compute time     0.46 | Data time   110.90 
+[Valid] | Iter [ 128/ 136] | Loss     0.0679 | SSIM    0.250 | PSNR   14.100 | Time   4.99
+[Valid] | Done [ 133/ 136] | Loss     0.0705 | SSIM    0.255 | PSNR   14.398 | Time   5.20
+
+[Train] Epoch    59 | Iter  18304 | Loss     0.2881 | Compute time     0.43 | Data time    32.31 
+[Train] Epoch    59 | Iter  18432 | Loss     0.3556 | Compute time     0.47 | Data time    89.37 
+[Valid] | Iter [ 128/ 136] | Loss     0.0692 | SSIM    0.250 | PSNR   14.058 | Time   5.01
+[Valid] | Done [ 133/ 136] | Loss     0.0717 | SSIM    0.255 | PSNR   14.356 | Time   5.23
+
+[Train] Epoch    60 | Iter  18560 | Loss     0.3311 | Compute time     0.41 | Data time     8.48 
+[Train] Epoch    60 | Iter  18688 | Loss     0.4688 | Compute time     0.41 | Data time    64.36 
+[Train] Epoch    60 | Iter  18816 | Loss     0.3600 | Compute time     0.46 | Data time   120.06 
+[Valid] | Iter [ 128/ 136] | Loss     0.0663 | SSIM    0.250 | PSNR   14.142 | Time   5.50
+[Valid] | Done [ 133/ 136] | Loss     0.0687 | SSIM    0.255 | PSNR   14.441 | Time   5.78
+[Valid] ~ new best ~ 
+
+[Train] Epoch    61 | Iter  18944 | Loss     0.3447 | Compute time     0.41 | Data time    42.09 
+[Train] Epoch    61 | Iter  19072 | Loss     0.3887 | Compute time     0.41 | Data time    98.95 
+[Valid] | Iter [ 128/ 136] | Loss     0.0665 | SSIM    0.250 | PSNR   14.142 | Time   4.89
+[Valid] | Done [ 133/ 136] | Loss     0.0689 | SSIM    0.255 | PSNR   14.441 | Time   5.12
+
+[Train] Epoch    62 | Iter  19200 | Loss     0.3487 | Compute time     0.41 | Data time    18.14 
+[Train] Epoch    62 | Iter  19328 | Loss     0.3586 | Compute time     0.41 | Data time    75.03 
+[Train] Epoch    62 | Iter  19456 | Loss     0.3896 | Compute time     0.41 | Data time   131.56 
+[Valid] | Iter [ 128/ 136] | Loss     0.0664 | SSIM    0.250 | PSNR   14.137 | Time   5.01
+[Valid] | Done [ 133/ 136] | Loss     0.0688 | SSIM    0.255 | PSNR   14.437 | Time   5.24
+
+[Train] Epoch    63 | Iter  19584 | Loss     0.4388 | Compute time     0.47 | Data time    51.08 
+[Train] Epoch    63 | Iter  19712 | Loss     0.3615 | Compute time     0.41 | Data time   107.59 
+[Valid] | Iter [ 128/ 136] | Loss     0.0659 | SSIM    0.250 | PSNR   14.168 | Time   5.00
+[Valid] | Done [ 133/ 136] | Loss     0.0686 | SSIM    0.255 | PSNR   14.461 | Time   5.24
+[Valid] ~ new best ~ 
+
+[Train] Epoch    64 | Iter  19840 | Loss     0.2974 | Compute time     0.40 | Data time    27.55 
+[Train] Epoch    64 | Iter  19968 | Loss     0.3032 | Compute time     0.41 | Data time    84.25 
+[Valid] | Iter [ 128/ 136] | Loss     0.0659 | SSIM    0.250 | PSNR   14.160 | Time   4.84
+[Valid] | Done [ 133/ 136] | Loss     0.0683 | SSIM    0.255 | PSNR   14.457 | Time   5.08
+
+[Train] Epoch    65 | Iter  20096 | Loss     0.4353 | Compute time     0.41 | Data time     4.74 
+[Train] Epoch    65 | Iter  20224 | Loss     0.3569 | Compute time     0.41 | Data time    60.77 
+[Train] Epoch    65 | Iter  20352 | Loss     0.3024 | Compute time     0.41 | Data time   117.68 
+[Valid] | Iter [ 128/ 136] | Loss     0.0656 | SSIM    0.250 | PSNR   14.170 | Time   4.86
+[Valid] | Done [ 133/ 136] | Loss     0.0681 | SSIM    0.255 | PSNR   14.468 | Time   5.12
+[Valid] ~ new best ~ 
+
+[Train] Epoch    66 | Iter  20480 | Loss     0.3712 | Compute time     0.46 | Data time    37.66 
+[Train] Epoch    66 | Iter  20608 | Loss     0.3217 | Compute time     0.41 | Data time    94.12 
+[Valid] | Iter [ 128/ 136] | Loss     0.0652 | SSIM    0.250 | PSNR   14.179 | Time   4.78
+[Valid] | Done [ 133/ 136] | Loss     0.0676 | SSIM    0.256 | PSNR   14.478 | Time   5.04
+[Valid] ~ new best ~ 
+
+[Train] Epoch    67 | Iter  20736 | Loss     0.3448 | Compute time     0.40 | Data time    14.33 
+[Train] Epoch    67 | Iter  20864 | Loss     0.3544 | Compute time     0.41 | Data time    70.45 
+[Train] Epoch    67 | Iter  20992 | Loss     0.3194 | Compute time     0.41 | Data time   127.05 
+[Valid] | Iter [ 128/ 136] | Loss     0.0650 | SSIM    0.250 | PSNR   14.187 | Time   5.06
+[Valid] | Done [ 133/ 136] | Loss     0.0673 | SSIM    0.256 | PSNR   14.488 | Time   5.29
+[Valid] ~ new best ~ 
+
+[Train] Epoch    68 | Iter  21120 | Loss     0.2993 | Compute time     0.45 | Data time    47.26 
+[Train] Epoch    68 | Iter  21248 | Loss     0.3345 | Compute time     0.41 | Data time   104.67 
+[Valid] | Iter [ 128/ 136] | Loss     0.0650 | SSIM    0.250 | PSNR   14.187 | Time   5.44
+[Valid] | Done [ 133/ 136] | Loss     0.0675 | SSIM    0.256 | PSNR   14.483 | Time   5.75
+
+[Train] Epoch    69 | Iter  21376 | Loss     0.3658 | Compute time     0.40 | Data time    23.95 
+[Train] Epoch    69 | Iter  21504 | Loss     0.3768 | Compute time     0.46 | Data time    80.89 
+[Valid] | Iter [ 128/ 136] | Loss     0.0646 | SSIM    0.250 | PSNR   14.198 | Time   4.84
+[Valid] | Done [ 133/ 136] | Loss     0.0671 | SSIM    0.256 | PSNR   14.496 | Time   5.08
+[Valid] ~ new best ~ 
+
+[Train] Epoch    70 | Iter  21632 | Loss     0.3861 | Compute time     0.41 | Data time     0.49 
+[Train] Epoch    70 | Iter  21760 | Loss     0.4027 | Compute time     0.40 | Data time    57.75 
+[Train] Epoch    70 | Iter  21888 | Loss     0.3276 | Compute time     0.42 | Data time   113.94 
+[Valid] | Iter [ 128/ 136] | Loss     0.0649 | SSIM    0.250 | PSNR   14.192 | Time   5.49
+[Valid] | Done [ 133/ 136] | Loss     0.0673 | SSIM    0.256 | PSNR   14.492 | Time   5.74
+
+[Train] Epoch    71 | Iter  22016 | Loss     0.3457 | Compute time     0.41 | Data time    33.94 
+[Train] Epoch    71 | Iter  22144 | Loss     0.3595 | Compute time     0.41 | Data time    89.68 
+[Valid] | Iter [ 128/ 136] | Loss     0.0653 | SSIM    0.250 | PSNR   14.190 | Time   4.69
+[Valid] | Done [ 133/ 136] | Loss     0.0677 | SSIM    0.256 | PSNR   14.489 | Time   4.93
+
+[Train] Epoch    72 | Iter  22272 | Loss     0.3483 | Compute time     0.42 | Data time    10.38 
+[Train] Epoch    72 | Iter  22400 | Loss     0.3300 | Compute time     0.40 | Data time    67.35 
+[Train] Epoch    72 | Iter  22528 | Loss     0.3694 | Compute time     0.41 | Data time   124.32 
+[Valid] | Iter [ 128/ 136] | Loss     0.0649 | SSIM    0.250 | PSNR   14.193 | Time   5.34
+[Valid] | Done [ 133/ 136] | Loss     0.0673 | SSIM    0.256 | PSNR   14.493 | Time   5.66
+
+[Train] Epoch    73 | Iter  22656 | Loss     0.3112 | Compute time     0.41 | Data time    43.22 
+[Train] Epoch    73 | Iter  22784 | Loss     0.2871 | Compute time     0.41 | Data time    99.21 
+[Valid] | Iter [ 128/ 136] | Loss     0.0645 | SSIM    0.250 | PSNR   14.210 | Time   5.08
+[Valid] | Done [ 133/ 136] | Loss     0.0670 | SSIM    0.256 | PSNR   14.511 | Time   5.34
+[Valid] ~ new best ~ 
+
+[Train] Epoch    74 | Iter  22912 | Loss     0.3689 | Compute time     0.41 | Data time    19.80 
+[Train] Epoch    74 | Iter  23040 | Loss     0.3440 | Compute time     0.43 | Data time    76.28 
+[Train] Epoch    74 | Iter  23168 | Loss     0.3942 | Compute time     0.39 | Data time   132.78 
+[Valid] | Iter [ 128/ 136] | Loss     0.0646 | SSIM    0.250 | PSNR   14.205 | Time   4.97
+[Valid] | Done [ 133/ 136] | Loss     0.0669 | SSIM    0.256 | PSNR   14.508 | Time   5.28
+[Valid] ~ new best ~ 
+
+[Train] Epoch    75 | Iter  23296 | Loss     0.4071 | Compute time     0.41 | Data time    52.77 
+[Train] Epoch    75 | Iter  23424 | Loss     0.4716 | Compute time     0.40 | Data time   108.52 
+[Valid] | Iter [ 128/ 136] | Loss     0.0638 | SSIM    0.250 | PSNR   14.224 | Time   4.88
+[Valid] | Done [ 133/ 136] | Loss     0.0663 | SSIM    0.256 | PSNR   14.524 | Time   5.11
+[Valid] ~ new best ~ 
+
+[Train] Epoch    76 | Iter  23552 | Loss     0.2758 | Compute time     0.41 | Data time    29.14 
+[Train] Epoch    76 | Iter  23680 | Loss     0.3722 | Compute time     0.41 | Data time    85.31 
+[Valid] | Iter [ 128/ 136] | Loss     0.0645 | SSIM    0.250 | PSNR   14.209 | Time   5.36
+[Valid] | Done [ 133/ 136] | Loss     0.0671 | SSIM    0.256 | PSNR   14.504 | Time   5.60
+
+[Train] Epoch    77 | Iter  23808 | Loss     0.3741 | Compute time     0.41 | Data time     6.44 
+[Train] Epoch    77 | Iter  23936 | Loss     0.3638 | Compute time     0.41 | Data time    63.74 
+[Train] Epoch    77 | Iter  24064 | Loss     0.2779 | Compute time     0.40 | Data time   119.70 
+[Valid] | Iter [ 128/ 136] | Loss     0.0643 | SSIM    0.250 | PSNR   14.206 | Time   4.96
+[Valid] | Done [ 133/ 136] | Loss     0.0667 | SSIM    0.256 | PSNR   14.506 | Time   5.19
+
+[Train] Epoch    78 | Iter  24192 | Loss     0.3616 | Compute time     0.41 | Data time    39.44 
+[Train] Epoch    78 | Iter  24320 | Loss     0.3643 | Compute time     0.41 | Data time    95.53 
+[Valid] | Iter [ 128/ 136] | Loss     0.0640 | SSIM    0.250 | PSNR   14.210 | Time   5.37
+[Valid] | Done [ 133/ 136] | Loss     0.0665 | SSIM    0.256 | PSNR   14.509 | Time   5.62
+
+[Train] Epoch    79 | Iter  24448 | Loss     0.3708 | Compute time     0.42 | Data time    16.02 
+[Train] Epoch    79 | Iter  24576 | Loss     0.3119 | Compute time     0.41 | Data time    72.90 
+[Train] Epoch    79 | Iter  24704 | Loss     0.2878 | Compute time     0.43 | Data time   128.87 
+[Valid] | Iter [ 128/ 136] | Loss     0.0637 | SSIM    0.250 | PSNR   14.232 | Time   5.09
+[Valid] | Done [ 133/ 136] | Loss     0.0662 | SSIM    0.256 | PSNR   14.530 | Time   5.31
+[Valid] ~ new best ~ 
+
+[Train] Epoch    80 | Iter  24832 | Loss     0.4152 | Compute time     0.46 | Data time    48.79 
+[Train] Epoch    80 | Iter  24960 | Loss     0.3595 | Compute time     0.41 | Data time   105.40 
+[Valid] | Iter [ 128/ 136] | Loss     0.0637 | SSIM    0.250 | PSNR   14.229 | Time   4.86
+[Valid] | Done [ 133/ 136] | Loss     0.0661 | SSIM    0.256 | PSNR   14.529 | Time   5.09
+
+[Train] Epoch    81 | Iter  25088 | Loss     0.3733 | Compute time     0.47 | Data time    26.08 
+[Train] Epoch    81 | Iter  25216 | Loss     0.3888 | Compute time     0.40 | Data time    82.90 
+[Valid] | Iter [ 128/ 136] | Loss     0.0640 | SSIM    0.250 | PSNR   14.222 | Time   4.96
+[Valid] | Done [ 133/ 136] | Loss     0.0664 | SSIM    0.256 | PSNR   14.520 | Time   5.29
+
+[Train] Epoch    82 | Iter  25344 | Loss     0.3807 | Compute time     0.44 | Data time     2.39 
+[Train] Epoch    82 | Iter  25472 | Loss     0.3107 | Compute time     0.46 | Data time    58.50 
+[Train] Epoch    82 | Iter  25600 | Loss     0.3901 | Compute time     0.41 | Data time   115.36 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.233 | Time   4.79
+[Valid] | Done [ 133/ 136] | Loss     0.0660 | SSIM    0.256 | PSNR   14.530 | Time   5.03
+[Valid] ~ new best ~ 
+
+[Train] Epoch    83 | Iter  25728 | Loss     0.3405 | Compute time     0.41 | Data time    35.32 
+[Train] Epoch    83 | Iter  25856 | Loss     0.3201 | Compute time     0.47 | Data time    92.05 
+[Valid] | Iter [ 128/ 136] | Loss     0.0641 | SSIM    0.250 | PSNR   14.208 | Time   5.07
+[Valid] | Done [ 133/ 136] | Loss     0.0665 | SSIM    0.256 | PSNR   14.509 | Time   5.30
+
+[Train] Epoch    84 | Iter  25984 | Loss     0.3757 | Compute time     0.41 | Data time    11.99 
+[Train] Epoch    84 | Iter  26112 | Loss     0.3728 | Compute time     0.41 | Data time    67.57 
+[Train] Epoch    84 | Iter  26240 | Loss     0.2819 | Compute time     0.41 | Data time   123.95 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.236 | Time   4.99
+[Valid] | Done [ 133/ 136] | Loss     0.0658 | SSIM    0.256 | PSNR   14.538 | Time   5.23
+
+[Train] Epoch    85 | Iter  26368 | Loss     0.3880 | Compute time     0.39 | Data time    44.79 
+[Train] Epoch    85 | Iter  26496 | Loss     0.3787 | Compute time     0.43 | Data time   101.97 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.239 | Time   5.19
+[Valid] | Done [ 133/ 136] | Loss     0.0658 | SSIM    0.256 | PSNR   14.538 | Time   5.43
+[Valid] ~ new best ~ 
+
+[Train] Epoch    86 | Iter  26624 | Loss     0.3708 | Compute time     0.49 | Data time    21.33 
+[Train] Epoch    86 | Iter  26752 | Loss     0.3763 | Compute time     0.42 | Data time    77.45 
+[Train] Epoch    86 | Iter  26880 | Loss     0.4039 | Compute time     0.41 | Data time   134.39 
+[Valid] | Iter [ 128/ 136] | Loss     0.0638 | SSIM    0.250 | PSNR   14.217 | Time   5.03
+[Valid] | Done [ 133/ 136] | Loss     0.0664 | SSIM    0.256 | PSNR   14.513 | Time   5.31
+
+[Train] Epoch    87 | Iter  27008 | Loss     0.4281 | Compute time     0.48 | Data time    54.77 
+[Train] Epoch    87 | Iter  27136 | Loss     0.2832 | Compute time     0.41 | Data time   110.57 
+[Valid] | Iter [ 128/ 136] | Loss     0.0638 | SSIM    0.250 | PSNR   14.229 | Time   5.00
+[Valid] | Done [ 133/ 136] | Loss     0.0662 | SSIM    0.256 | PSNR   14.530 | Time   5.24
+
+[Train] Epoch    88 | Iter  27264 | Loss     0.3728 | Compute time     0.45 | Data time    31.50 
+[Train] Epoch    88 | Iter  27392 | Loss     0.3108 | Compute time     0.42 | Data time    88.22 
+[Valid] | Iter [ 128/ 136] | Loss     0.0639 | SSIM    0.250 | PSNR   14.219 | Time   4.86
+[Valid] | Done [ 133/ 136] | Loss     0.0665 | SSIM    0.256 | PSNR   14.514 | Time   5.10
+
+[Train] Epoch    89 | Iter  27520 | Loss     0.3100 | Compute time     0.41 | Data time     7.97 
+[Train] Epoch    89 | Iter  27648 | Loss     0.3584 | Compute time     0.41 | Data time    63.53 
+[Train] Epoch    89 | Iter  27776 | Loss     0.3940 | Compute time     0.46 | Data time   119.64 
+[Valid] | Iter [ 128/ 136] | Loss     0.0637 | SSIM    0.250 | PSNR   14.233 | Time   4.88
+[Valid] | Done [ 133/ 136] | Loss     0.0661 | SSIM    0.256 | PSNR   14.532 | Time   5.11
+
+[Train] Epoch    90 | Iter  27904 | Loss     0.3185 | Compute time     0.46 | Data time    40.77 
+[Train] Epoch    90 | Iter  28032 | Loss     0.3625 | Compute time     0.46 | Data time    96.90 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.229 | Time   4.87
+[Valid] | Done [ 133/ 136] | Loss     0.0658 | SSIM    0.256 | PSNR   14.527 | Time   5.11
+
+[Train] Epoch    91 | Iter  28160 | Loss     0.2748 | Compute time     0.47 | Data time    17.64 
+[Train] Epoch    91 | Iter  28288 | Loss     0.3451 | Compute time     0.41 | Data time    73.63 
+[Train] Epoch    91 | Iter  28416 | Loss     0.3599 | Compute time     0.41 | Data time   129.67 
+[Valid] | Iter [ 128/ 136] | Loss     0.0634 | SSIM    0.250 | PSNR   14.231 | Time   5.39
+[Valid] | Done [ 133/ 136] | Loss     0.0659 | SSIM    0.256 | PSNR   14.529 | Time   5.66
+
+[Train] Epoch    92 | Iter  28544 | Loss     0.3613 | Compute time     0.39 | Data time    50.93 
+[Train] Epoch    92 | Iter  28672 | Loss     0.3919 | Compute time     0.40 | Data time   106.67 
+[Valid] | Iter [ 128/ 136] | Loss     0.0636 | SSIM    0.250 | PSNR   14.221 | Time   4.99
+[Valid] | Done [ 133/ 136] | Loss     0.0660 | SSIM    0.256 | PSNR   14.520 | Time   5.24
+
+[Train] Epoch    93 | Iter  28800 | Loss     0.3423 | Compute time     0.41 | Data time    27.23 
+[Train] Epoch    93 | Iter  28928 | Loss     0.3742 | Compute time     0.40 | Data time    83.27 
+[Valid] | Iter [ 128/ 136] | Loss     0.0639 | SSIM    0.250 | PSNR   14.210 | Time   4.87
+[Valid] | Done [ 133/ 136] | Loss     0.0663 | SSIM    0.256 | PSNR   14.509 | Time   5.12
+
+[Train] Epoch    94 | Iter  29056 | Loss     0.3064 | Compute time     0.41 | Data time     3.96 
+[Train] Epoch    94 | Iter  29184 | Loss     0.4112 | Compute time     0.43 | Data time    60.83 
+[Train] Epoch    94 | Iter  29312 | Loss     0.3688 | Compute time     0.46 | Data time   117.18 
+[Valid] | Iter [ 128/ 136] | Loss     0.0636 | SSIM    0.250 | PSNR   14.226 | Time   4.82
+[Valid] | Done [ 133/ 136] | Loss     0.0661 | SSIM    0.256 | PSNR   14.523 | Time   5.05
+
+[Train] Epoch    95 | Iter  29440 | Loss     0.3556 | Compute time     0.41 | Data time    37.04 
+[Train] Epoch    95 | Iter  29568 | Loss     0.3882 | Compute time     0.40 | Data time    93.29 
+[Valid] | Iter [ 128/ 136] | Loss     0.0630 | SSIM    0.250 | PSNR   14.248 | Time   4.89
+[Valid] | Done [ 133/ 136] | Loss     0.0655 | SSIM    0.256 | PSNR   14.546 | Time   5.12
+
+[Train] Epoch    96 | Iter  29696 | Loss     0.3956 | Compute time     0.41 | Data time    13.51 
+[Train] Epoch    96 | Iter  29824 | Loss     0.3589 | Compute time     0.43 | Data time    70.34 
+[Train] Epoch    96 | Iter  29952 | Loss     0.4008 | Compute time     0.40 | Data time   126.42 
+[Valid] | Iter [ 128/ 136] | Loss     0.0634 | SSIM    0.250 | PSNR   14.228 | Time   4.79
+[Valid] | Done [ 133/ 136] | Loss     0.0658 | SSIM    0.256 | PSNR   14.527 | Time   5.03
+
+[Train] Epoch    97 | Iter  30080 | Loss     0.3494 | Compute time     0.41 | Data time    46.84 
+[Train] Epoch    97 | Iter  30208 | Loss     0.2996 | Compute time     0.41 | Data time   103.46 
+[Valid] | Iter [ 128/ 136] | Loss     0.0633 | SSIM    0.250 | PSNR   14.240 | Time   4.81
+[Valid] | Done [ 133/ 136] | Loss     0.0658 | SSIM    0.256 | PSNR   14.538 | Time   5.04
+
+[Train] Epoch    98 | Iter  30336 | Loss     0.3172 | Compute time     0.43 | Data time    23.90 
+[Train] Epoch    98 | Iter  30464 | Loss     0.3595 | Compute time     0.42 | Data time    80.37 
+[Valid] | Iter [ 128/ 136] | Loss     0.0647 | SSIM    0.250 | PSNR   14.193 | Time   5.15
+[Valid] | Done [ 133/ 136] | Loss     0.0671 | SSIM    0.256 | PSNR   14.494 | Time   5.38
+
+[Train] Epoch    99 | Iter  30592 | Loss     0.3756 | Compute time     0.44 | Data time     0.09 
+[Train] Epoch    99 | Iter  30720 | Loss     0.2839 | Compute time     0.41 | Data time    55.98 
+[Train] Epoch    99 | Iter  30848 | Loss     0.3090 | Compute time     0.41 | Data time   112.86 
+[Valid] | Iter [ 128/ 136] | Loss     0.0638 | SSIM    0.250 | PSNR   14.219 | Time   4.95
+[Valid] | Done [ 133/ 136] | Loss     0.0661 | SSIM    0.256 | PSNR   14.520 | Time   5.18
+
+[Train] Epoch   100 | Iter  30976 | Loss     0.3488 | Compute time     0.41 | Data time    32.84 
+[Train] Epoch   100 | Iter  31104 | Loss     0.3707 | Compute time     0.46 | Data time    89.30 
+[Valid] | Iter [ 128/ 136] | Loss     0.0639 | SSIM    0.250 | PSNR   14.220 | Time   4.87
+[Valid] | Done [ 133/ 136] | Loss     0.0662 | SSIM    0.256 | PSNR   14.521 | Time   5.09
+
+[Train] Epoch   101 | Iter  31232 | Loss     0.2247 | Compute time     0.43 | Data time     9.49 
+[Train] Epoch   101 | Iter  31360 | Loss     0.3705 | Compute time     0.42 | Data time    65.52 
+[Train] Epoch   101 | Iter  31488 | Loss     0.3594 | Compute time     0.41 | Data time   121.80 
+[Valid] | Iter [ 128/ 136] | Loss     0.0636 | SSIM    0.250 | PSNR   14.227 | Time   4.92
+[Valid] | Done [ 133/ 136] | Loss     0.0660 | SSIM    0.256 | PSNR   14.528 | Time   5.15
+
+[Train] Epoch   102 | Iter  31616 | Loss     0.3160 | Compute time     0.41 | Data time    42.82 
+[Train] Epoch   102 | Iter  31744 | Loss     0.3781 | Compute time     0.46 | Data time    99.00 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.238 | Time   4.93
+[Valid] | Done [ 133/ 136] | Loss     0.0659 | SSIM    0.256 | PSNR   14.536 | Time   5.16
+
+[Train] Epoch   103 | Iter  31872 | Loss     0.3356 | Compute time     0.41 | Data time    19.05 
+[Train] Epoch   103 | Iter  32000 | Loss     0.3646 | Compute time     0.48 | Data time    75.94 
+[Train] Epoch   103 | Iter  32128 | Loss     0.3154 | Compute time     0.40 | Data time   132.34 
+[Valid] | Iter [ 128/ 136] | Loss     0.0634 | SSIM    0.250 | PSNR   14.232 | Time   4.91
+[Valid] | Done [ 133/ 136] | Loss     0.0657 | SSIM    0.256 | PSNR   14.533 | Time   5.13
+
+[Train] Epoch   104 | Iter  32256 | Loss     0.4149 | Compute time     0.47 | Data time    52.71 
+[Train] Epoch   104 | Iter  32384 | Loss     0.3837 | Compute time     0.40 | Data time   109.38 
+[Valid] | Iter [ 128/ 136] | Loss     0.0630 | SSIM    0.250 | PSNR   14.244 | Time   5.08
+[Valid] | Done [ 133/ 136] | Loss     0.0656 | SSIM    0.256 | PSNR   14.537 | Time   5.32
+
+[Train] Epoch   105 | Iter  32512 | Loss     0.3455 | Compute time     0.41 | Data time    28.72 
+[Train] Epoch   105 | Iter  32640 | Loss     0.4253 | Compute time     0.41 | Data time    85.66 
+[Valid] | Iter [ 128/ 136] | Loss     0.0638 | SSIM    0.250 | PSNR   14.217 | Time   5.27
+[Valid] | Done [ 133/ 136] | Loss     0.0663 | SSIM    0.256 | PSNR   14.515 | Time   5.52
+
+[Train] Epoch   106 | Iter  32768 | Loss     0.3320 | Compute time     0.42 | Data time     5.71 
+[Train] Epoch   106 | Iter  32896 | Loss     0.3061 | Compute time     0.40 | Data time    63.12 
+[Train] Epoch   106 | Iter  33024 | Loss     0.3889 | Compute time     0.40 | Data time   120.25 
+[Valid] | Iter [ 128/ 136] | Loss     0.0643 | SSIM    0.250 | PSNR   14.198 | Time   4.93
+[Valid] | Done [ 133/ 136] | Loss     0.0666 | SSIM    0.256 | PSNR   14.499 | Time   5.16
+
+[Train] Epoch   107 | Iter  33152 | Loss     0.3242 | Compute time     0.41 | Data time    38.32 
+[Train] Epoch   107 | Iter  33280 | Loss     0.2867 | Compute time     0.40 | Data time    94.87 
+[Valid] | Iter [ 128/ 136] | Loss     0.0634 | SSIM    0.250 | PSNR   14.234 | Time   5.06
+[Valid] | Done [ 133/ 136] | Loss     0.0657 | SSIM    0.256 | PSNR   14.535 | Time   5.31
+
+[Train] Epoch   108 | Iter  33408 | Loss     0.4046 | Compute time     0.40 | Data time    16.05 
+[Train] Epoch   108 | Iter  33536 | Loss     0.3514 | Compute time     0.41 | Data time    72.87 
+[Train] Epoch   108 | Iter  33664 | Loss     0.3192 | Compute time     0.41 | Data time   129.24 
+[Valid] | Iter [ 128/ 136] | Loss     0.0629 | SSIM    0.250 | PSNR   14.241 | Time   4.99
+[Valid] | Done [ 133/ 136] | Loss     0.0654 | SSIM    0.256 | PSNR   14.540 | Time   5.28
+
+[Train] Epoch   109 | Iter  33792 | Loss     0.3980 | Compute time     0.42 | Data time    48.65 
+[Train] Epoch   109 | Iter  33920 | Loss     0.4059 | Compute time     0.41 | Data time   105.51 
+[Valid] | Iter [ 128/ 136] | Loss     0.0631 | SSIM    0.250 | PSNR   14.243 | Time   5.53
+[Valid] | Done [ 133/ 136] | Loss     0.0656 | SSIM    0.256 | PSNR   14.539 | Time   5.79
+[Valid] ~ new best ~ 
+
+[Train] Epoch   110 | Iter  34048 | Loss     0.3400 | Compute time     0.41 | Data time    24.82 
+[Train] Epoch   110 | Iter  34176 | Loss     0.3908 | Compute time     0.40 | Data time    81.66 
+[Valid] | Iter [ 128/ 136] | Loss     0.0633 | SSIM    0.250 | PSNR   14.231 | Time   4.84
+[Valid] | Done [ 133/ 136] | Loss     0.0657 | SSIM    0.256 | PSNR   14.532 | Time   5.09
+
+[Train] Epoch   111 | Iter  34304 | Loss     0.3622 | Compute time     0.49 | Data time     1.92 
+[Train] Epoch   111 | Iter  34432 | Loss     0.3069 | Compute time     0.41 | Data time    58.24 
+[Train] Epoch   111 | Iter  34560 | Loss     0.3505 | Compute time     0.41 | Data time   114.71 
+[Valid] | Iter [ 128/ 136] | Loss     0.0632 | SSIM    0.250 | PSNR   14.237 | Time   4.94
+[Valid] | Done [ 133/ 136] | Loss     0.0656 | SSIM    0.256 | PSNR   14.536 | Time   5.17
+
+[Train] Epoch   112 | Iter  34688 | Loss     0.2910 | Compute time     0.41 | Data time    34.99 
+[Train] Epoch   112 | Iter  34816 | Loss     0.4106 | Compute time     0.45 | Data time    91.67 
+[Valid] | Iter [ 128/ 136] | Loss     0.0633 | SSIM    0.250 | PSNR   14.232 | Time   4.85
+[Valid] | Done [ 133/ 136] | Loss     0.0659 | SSIM    0.256 | PSNR   14.526 | Time   5.09
+
+[Train] Epoch   113 | Iter  34944 | Loss     0.3951 | Compute time     0.40 | Data time    11.36 
+[Train] Epoch   113 | Iter  35072 | Loss     0.3870 | Compute time     0.41 | Data time    66.99 
+[Train] Epoch   113 | Iter  35200 | Loss     0.3192 | Compute time     0.42 | Data time   123.40 
+[Valid] | Iter [ 128/ 136] | Loss     0.0633 | SSIM    0.250 | PSNR   14.239 | Time   5.47
+[Valid] | Done [ 133/ 136] | Loss     0.0658 | SSIM    0.256 | PSNR   14.537 | Time   5.70
+
+[Train] Epoch   114 | Iter  35328 | Loss     0.3708 | Compute time     0.39 | Data time    45.33 
+[Train] Epoch   114 | Iter  35456 | Loss     0.3474 | Compute time     0.50 | Data time   101.33 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.225 | Time   5.03
+[Valid] | Done [ 133/ 136] | Loss     0.0661 | SSIM    0.256 | PSNR   14.521 | Time   5.27
+
+[Train] Epoch   115 | Iter  35584 | Loss     0.3323 | Compute time     0.48 | Data time    21.07 
+[Train] Epoch   115 | Iter  35712 | Loss     0.4047 | Compute time     0.41 | Data time    77.31 
+[Train] Epoch   115 | Iter  35840 | Loss     0.3128 | Compute time     0.40 | Data time   133.23 
+[Valid] | Iter [ 128/ 136] | Loss     0.0637 | SSIM    0.250 | PSNR   14.226 | Time   4.93
+[Valid] | Done [ 133/ 136] | Loss     0.0663 | SSIM    0.256 | PSNR   14.521 | Time   5.25
+
+[Train] Epoch   116 | Iter  35968 | Loss     0.3916 | Compute time     0.46 | Data time    53.60 
+[Train] Epoch   116 | Iter  36096 | Loss     0.3897 | Compute time     0.41 | Data time   109.55 
+[Valid] | Iter [ 128/ 136] | Loss     0.0638 | SSIM    0.250 | PSNR   14.213 | Time   5.03
+[Valid] | Done [ 133/ 136] | Loss     0.0662 | SSIM    0.256 | PSNR   14.512 | Time   5.26
+
+[Train] Epoch   117 | Iter  36224 | Loss     0.3049 | Compute time     0.41 | Data time    31.05 
+[Train] Epoch   117 | Iter  36352 | Loss     0.3175 | Compute time     0.46 | Data time    87.46 
+[Valid] | Iter [ 128/ 136] | Loss     0.0629 | SSIM    0.250 | PSNR   14.247 | Time   5.45
+[Valid] | Done [ 133/ 136] | Loss     0.0654 | SSIM    0.256 | PSNR   14.544 | Time   5.69
+
+[Train] Epoch   118 | Iter  36480 | Loss     0.2938 | Compute time     0.40 | Data time     7.51 
+[Train] Epoch   118 | Iter  36608 | Loss     0.3255 | Compute time     0.41 | Data time    64.12 
+[Train] Epoch   118 | Iter  36736 | Loss     0.3732 | Compute time     0.42 | Data time   120.50 
+[Valid] | Iter [ 128/ 136] | Loss     0.0638 | SSIM    0.250 | PSNR   14.208 | Time   4.98
+[Valid] | Done [ 133/ 136] | Loss     0.0661 | SSIM    0.256 | PSNR   14.510 | Time   5.22
+
+[Train] Epoch   119 | Iter  36864 | Loss     0.3650 | Compute time     0.41 | Data time    41.25 
+[Train] Epoch   119 | Iter  36992 | Loss     0.3957 | Compute time     0.40 | Data time    98.11 
+[Valid] | Iter [ 128/ 136] | Loss     0.0634 | SSIM    0.250 | PSNR   14.231 | Time   4.98
+[Valid] | Done [ 133/ 136] | Loss     0.0657 | SSIM    0.256 | PSNR   14.533 | Time   5.25
+
+[Train] Epoch   120 | Iter  37120 | Loss     0.3484 | Compute time     0.41 | Data time    16.87 
+[Train] Epoch   120 | Iter  37248 | Loss     0.3444 | Compute time     0.46 | Data time    73.78 
+[Train] Epoch   120 | Iter  37376 | Loss     0.3997 | Compute time     0.43 | Data time   130.13 
+[Valid] | Iter [ 128/ 136] | Loss     0.0637 | SSIM    0.250 | PSNR   14.217 | Time   4.79
+[Valid] | Done [ 133/ 136] | Loss     0.0662 | SSIM    0.256 | PSNR   14.513 | Time   5.10
+
+[Train] Epoch   121 | Iter  37504 | Loss     0.3329 | Compute time     0.44 | Data time    50.16 
+[Train] Epoch   121 | Iter  37632 | Loss     0.3268 | Compute time     0.40 | Data time   106.43 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.226 | Time   5.24
+[Valid] | Done [ 133/ 136] | Loss     0.0659 | SSIM    0.256 | PSNR   14.525 | Time   5.49
+
+[Train] Epoch   122 | Iter  37760 | Loss     0.3395 | Compute time     0.46 | Data time    26.94 
+[Train] Epoch   122 | Iter  37888 | Loss     0.3197 | Compute time     0.41 | Data time    83.83 
+[Valid] | Iter [ 128/ 136] | Loss     0.0642 | SSIM    0.250 | PSNR   14.204 | Time   5.42
+[Valid] | Done [ 133/ 136] | Loss     0.0668 | SSIM    0.256 | PSNR   14.498 | Time   5.69
+
+[Train] Epoch   123 | Iter  38016 | Loss     0.3497 | Compute time     0.40 | Data time     3.70 
+[Train] Epoch   123 | Iter  38144 | Loss     0.3307 | Compute time     0.40 | Data time    59.94 
+[Train] Epoch   123 | Iter  38272 | Loss     0.3810 | Compute time     0.41 | Data time   116.33 
+[Valid] | Iter [ 128/ 136] | Loss     0.0634 | SSIM    0.250 | PSNR   14.232 | Time   5.01
+[Valid] | Done [ 133/ 136] | Loss     0.0660 | SSIM    0.256 | PSNR   14.526 | Time   5.24
+
+[Train] Epoch   124 | Iter  38400 | Loss     0.2858 | Compute time     0.41 | Data time    36.27 
+[Train] Epoch   124 | Iter  38528 | Loss     0.3679 | Compute time     0.42 | Data time    92.60 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.230 | Time   4.90
+[Valid] | Done [ 133/ 136] | Loss     0.0658 | SSIM    0.256 | PSNR   14.531 | Time   5.14
+
+[Train] Epoch   125 | Iter  38656 | Loss     0.3709 | Compute time     0.40 | Data time    13.65 
+[Train] Epoch   125 | Iter  38784 | Loss     0.3421 | Compute time     0.41 | Data time    70.56 
+[Train] Epoch   125 | Iter  38912 | Loss     0.3096 | Compute time     0.41 | Data time   126.68 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.220 | Time   4.83
+[Valid] | Done [ 133/ 136] | Loss     0.0660 | SSIM    0.256 | PSNR   14.520 | Time   5.07
+
+[Train] Epoch   126 | Iter  39040 | Loss     0.3139 | Compute time     0.41 | Data time    46.14 
+[Train] Epoch   126 | Iter  39168 | Loss     0.2957 | Compute time     0.40 | Data time   102.64 
+[Valid] | Iter [ 128/ 136] | Loss     0.0631 | SSIM    0.250 | PSNR   14.231 | Time   5.38
+[Valid] | Done [ 133/ 136] | Loss     0.0657 | SSIM    0.256 | PSNR   14.526 | Time   5.63
+
+[Train] Epoch   127 | Iter  39296 | Loss     0.3390 | Compute time     0.40 | Data time    22.93 
+[Train] Epoch   127 | Iter  39424 | Loss     0.3661 | Compute time     0.40 | Data time    78.58 
+[Train] Epoch   127 | Iter  39552 | Loss     0.3431 | Compute time     1.85 | Data time   134.40 
+[Valid] | Iter [ 128/ 136] | Loss     0.0643 | SSIM    0.250 | PSNR   14.197 | Time   4.95
+[Valid] | Done [ 133/ 136] | Loss     0.0667 | SSIM    0.256 | PSNR   14.494 | Time   5.18
+
+[Train] Epoch   128 | Iter  39680 | Loss     0.2590 | Compute time     0.43 | Data time    56.74 
+[Train] Epoch   128 | Iter  39808 | Loss     0.2683 | Compute time     0.42 | Data time   113.96 
+[Valid] | Iter [ 128/ 136] | Loss     0.0638 | SSIM    0.250 | PSNR   14.208 | Time   5.10
+[Valid] | Done [ 133/ 136] | Loss     0.0663 | SSIM    0.256 | PSNR   14.505 | Time   5.34
+
+[Train] Epoch   129 | Iter  39936 | Loss     0.3850 | Compute time     0.40 | Data time    32.62 
+[Train] Epoch   129 | Iter  40064 | Loss     0.4063 | Compute time     0.41 | Data time    89.49 
+[Valid] | Iter [ 128/ 136] | Loss     0.0644 | SSIM    0.250 | PSNR   14.196 | Time   5.55
+[Valid] | Done [ 133/ 136] | Loss     0.0668 | SSIM    0.256 | PSNR   14.495 | Time   5.82
+
+[Train] Epoch   130 | Iter  40192 | Loss     0.3758 | Compute time     0.40 | Data time     9.43 
+[Train] Epoch   130 | Iter  40320 | Loss     0.3439 | Compute time     0.41 | Data time    65.95 
+[Train] Epoch   130 | Iter  40448 | Loss     0.3404 | Compute time     0.42 | Data time   122.44 
+[Valid] | Iter [ 128/ 136] | Loss     0.0633 | SSIM    0.250 | PSNR   14.228 | Time   4.96
+[Valid] | Done [ 133/ 136] | Loss     0.0657 | SSIM    0.256 | PSNR   14.528 | Time   5.20
+
+[Train] Epoch   131 | Iter  40576 | Loss     0.3079 | Compute time     0.40 | Data time    42.58 
+[Train] Epoch   131 | Iter  40704 | Loss     0.3057 | Compute time     0.41 | Data time    98.21 
+[Valid] | Iter [ 128/ 136] | Loss     0.0636 | SSIM    0.250 | PSNR   14.220 | Time   4.84
+[Valid] | Done [ 133/ 136] | Loss     0.0661 | SSIM    0.256 | PSNR   14.518 | Time   5.09
+
+[Train] Epoch   132 | Iter  40832 | Loss     0.3352 | Compute time     0.41 | Data time    18.75 
+[Train] Epoch   132 | Iter  40960 | Loss     0.3769 | Compute time     0.41 | Data time    75.03 
+[Train] Epoch   132 | Iter  41088 | Loss     0.3307 | Compute time     0.40 | Data time   131.17 
+[Valid] | Iter [ 128/ 136] | Loss     0.0637 | SSIM    0.250 | PSNR   14.219 | Time   5.08
+[Valid] | Done [ 133/ 136] | Loss     0.0661 | SSIM    0.256 | PSNR   14.516 | Time   5.31
+
+[Train] Epoch   133 | Iter  41216 | Loss     0.4003 | Compute time     0.41 | Data time    52.18 
+[Train] Epoch   133 | Iter  41344 | Loss     0.4659 | Compute time     0.49 | Data time   108.25 
+[Valid] | Iter [ 128/ 136] | Loss     0.0636 | SSIM    0.250 | PSNR   14.226 | Time   5.26
+[Valid] | Done [ 133/ 136] | Loss     0.0662 | SSIM    0.256 | PSNR   14.520 | Time   5.58
+[Valid] ~ new best ~ 
+
+[Train] Epoch   134 | Iter  41472 | Loss     0.2926 | Compute time     0.42 | Data time    29.12 
+[Train] Epoch   134 | Iter  41600 | Loss     0.3734 | Compute time     0.43 | Data time    86.27 
+[Valid] | Iter [ 128/ 136] | Loss     0.0636 | SSIM    0.250 | PSNR   14.229 | Time   4.81
+[Valid] | Done [ 133/ 136] | Loss     0.0660 | SSIM    0.256 | PSNR   14.528 | Time   5.03
+
+[Train] Epoch   135 | Iter  41728 | Loss     0.4255 | Compute time     0.49 | Data time     5.43 
+[Train] Epoch   135 | Iter  41856 | Loss     0.3350 | Compute time     0.42 | Data time    61.66 
+[Train] Epoch   135 | Iter  41984 | Loss     0.4031 | Compute time     0.43 | Data time   118.27 
+[Valid] | Iter [ 128/ 136] | Loss     0.0640 | SSIM    0.250 | PSNR   14.203 | Time   4.98
+[Valid] | Done [ 133/ 136] | Loss     0.0664 | SSIM    0.256 | PSNR   14.503 | Time   5.22
+
+[Train] Epoch   136 | Iter  42112 | Loss     0.3513 | Compute time     0.40 | Data time    38.53 
+[Train] Epoch   136 | Iter  42240 | Loss     0.3343 | Compute time     0.41 | Data time    95.30 
+[Valid] | Iter [ 128/ 136] | Loss     0.0636 | SSIM    0.250 | PSNR   14.222 | Time   5.35
+[Valid] | Done [ 133/ 136] | Loss     0.0661 | SSIM    0.256 | PSNR   14.521 | Time   5.61
+
+[Train] Epoch   137 | Iter  42368 | Loss     0.2724 | Compute time     0.41 | Data time    14.82 
+[Train] Epoch   137 | Iter  42496 | Loss     0.3979 | Compute time     0.41 | Data time    70.85 
+[Train] Epoch   137 | Iter  42624 | Loss     0.3886 | Compute time     0.41 | Data time   127.42 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.211 | Time   5.10
+[Valid] | Done [ 133/ 136] | Loss     0.0660 | SSIM    0.256 | PSNR   14.508 | Time   5.34
+
+[Train] Epoch   138 | Iter  42752 | Loss     0.3201 | Compute time     0.39 | Data time    48.30 
+[Train] Epoch   138 | Iter  42880 | Loss     0.3751 | Compute time     0.40 | Data time   105.46 
+[Valid] | Iter [ 128/ 136] | Loss     0.0632 | SSIM    0.250 | PSNR   14.236 | Time   4.90
+[Valid] | Done [ 133/ 136] | Loss     0.0656 | SSIM    0.256 | PSNR   14.535 | Time   5.13
+
+[Train] Epoch   139 | Iter  43008 | Loss     0.3384 | Compute time     0.40 | Data time    25.35 
+[Train] Epoch   139 | Iter  43136 | Loss     0.3763 | Compute time     0.40 | Data time    81.44 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.219 | Time   5.00
+[Valid] | Done [ 133/ 136] | Loss     0.0661 | SSIM    0.256 | PSNR   14.512 | Time   5.23
+
+[Train] Epoch   140 | Iter  43264 | Loss     0.3083 | Compute time     0.41 | Data time     1.39 
+[Train] Epoch   140 | Iter  43392 | Loss     0.3694 | Compute time     0.40 | Data time    57.70 
+[Train] Epoch   140 | Iter  43520 | Loss     0.3319 | Compute time     0.41 | Data time   113.86 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.221 | Time   4.77
+[Valid] | Done [ 133/ 136] | Loss     0.0658 | SSIM    0.256 | PSNR   14.520 | Time   4.99
+
+[Train] Epoch   141 | Iter  43648 | Loss     0.4168 | Compute time     0.46 | Data time    34.15 
+[Train] Epoch   141 | Iter  43776 | Loss     0.3387 | Compute time     0.39 | Data time    90.41 
+[Valid] | Iter [ 128/ 136] | Loss     0.0643 | SSIM    0.250 | PSNR   14.202 | Time   4.92
+[Valid] | Done [ 133/ 136] | Loss     0.0669 | SSIM    0.256 | PSNR   14.496 | Time   5.14
+
+[Train] Epoch   142 | Iter  43904 | Loss     0.3519 | Compute time     0.41 | Data time    11.35 
+[Train] Epoch   142 | Iter  44032 | Loss     0.3490 | Compute time     0.41 | Data time    66.89 
+[Train] Epoch   142 | Iter  44160 | Loss     0.2882 | Compute time     0.42 | Data time   123.14 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.226 | Time   4.88
+[Valid] | Done [ 133/ 136] | Loss     0.0660 | SSIM    0.256 | PSNR   14.525 | Time   5.11
+
+[Train] Epoch   143 | Iter  44288 | Loss     0.3313 | Compute time     0.40 | Data time    44.25 
+[Train] Epoch   143 | Iter  44416 | Loss     0.3339 | Compute time     0.39 | Data time   100.79 
+[Valid] | Iter [ 128/ 136] | Loss     0.0634 | SSIM    0.250 | PSNR   14.222 | Time   4.84
+[Valid] | Done [ 133/ 136] | Loss     0.0658 | SSIM    0.256 | PSNR   14.522 | Time   5.07
+
+[Train] Epoch   144 | Iter  44544 | Loss     0.3607 | Compute time     0.42 | Data time    20.64 
+[Train] Epoch   144 | Iter  44672 | Loss     0.3922 | Compute time     0.46 | Data time    77.11 
+[Train] Epoch   144 | Iter  44800 | Loss     0.2768 | Compute time     0.41 | Data time   133.55 
+[Valid] | Iter [ 128/ 136] | Loss     0.0633 | SSIM    0.250 | PSNR   14.219 | Time   4.98
+[Valid] | Done [ 133/ 136] | Loss     0.0657 | SSIM    0.256 | PSNR   14.517 | Time   5.22
+
+[Train] Epoch   145 | Iter  44928 | Loss     0.3243 | Compute time     0.40 | Data time    53.58 
+[Train] Epoch   145 | Iter  45056 | Loss     0.3024 | Compute time     0.40 | Data time   109.45 
+[Valid] | Iter [ 128/ 136] | Loss     0.0632 | SSIM    0.250 | PSNR   14.228 | Time   4.78
+[Valid] | Done [ 133/ 136] | Loss     0.0658 | SSIM    0.256 | PSNR   14.521 | Time   5.02
+
+[Train] Epoch   146 | Iter  45184 | Loss     0.3746 | Compute time     0.41 | Data time    30.37 
+[Train] Epoch   146 | Iter  45312 | Loss     0.3351 | Compute time     0.46 | Data time    86.48 
+[Valid] | Iter [ 128/ 136] | Loss     0.0643 | SSIM    0.250 | PSNR   14.192 | Time   5.14
+[Valid] | Done [ 133/ 136] | Loss     0.0667 | SSIM    0.256 | PSNR   14.493 | Time   5.38
+
+[Train] Epoch   147 | Iter  45440 | Loss     0.3244 | Compute time     0.40 | Data time     7.07 
+[Train] Epoch   147 | Iter  45568 | Loss     0.3564 | Compute time     0.49 | Data time    63.02 
+[Train] Epoch   147 | Iter  45696 | Loss     0.3240 | Compute time     0.41 | Data time   119.20 
+[Valid] | Iter [ 128/ 136] | Loss     0.0635 | SSIM    0.250 | PSNR   14.231 | Time   5.03
+[Valid] | Done [ 133/ 136] | Loss     0.0661 | SSIM    0.256 | PSNR   14.527 | Time   5.28
+
+[Train] Epoch   148 | Iter  45824 | Loss     0.4393 | Compute time     0.49 | Data time    40.51 
+[Train] Epoch   148 | Iter  45952 | Loss     0.3354 | Compute time     0.44 | Data time    96.64 
+[Valid] | Iter [ 128/ 136] | Loss     0.0638 | SSIM    0.250 | PSNR   14.215 | Time   4.93
+[Valid] | Done [ 133/ 136] | Loss     0.0662 | SSIM    0.256 | PSNR   14.513 | Time   5.18
+
+[Train] Epoch   149 | Iter  46080 | Loss     0.3557 | Compute time     0.41 | Data time    16.74 
+[Train] Epoch   149 | Iter  46208 | Loss     0.3911 | Compute time     0.41 | Data time    73.61 
+[Train] Epoch   149 | Iter  46336 | Loss     0.3299 | Compute time     0.46 | Data time   130.33 
+[Valid] | Iter [ 128/ 136] | Loss     0.0655 | SSIM    0.250 | PSNR   14.171 | Time   4.98
+[Valid] | Done [ 133/ 136] | Loss     0.0680 | SSIM    0.256 | PSNR   14.467 | Time   5.22
+
+[Train] Epoch   150 | Iter  46464 | Loss     0.2895 | Compute time     0.43 | Data time    50.12 
+[Train] Epoch   150 | Iter  46592 | Loss     0.3102 | Compute time     0.41 | Data time   107.51 
+[Valid] | Iter [ 128/ 136] | Loss     0.0640 | SSIM    0.250 | PSNR   14.208 | Time   4.99
+[Valid] | Done [ 133/ 136] | Loss     0.0663 | SSIM    0.256 | PSNR   14.509 | Time   5.21
+
+[Train] Epoch   151 | Iter  46720 | Loss     0.3609 | Compute time     0.40 | Data time    26.29 
+[Train] Epoch   151 | Iter  46848 | Loss     0.3741 | Compute time     0.41 | Data time    82.40 
+[Valid] | Iter [ 128/ 136] | Loss     0.0638 | SSIM    0.250 | PSNR   14.214 | Time   5.25
+[Valid] | Done [ 133/ 136] | Loss     0.0662 | SSIM    0.256 | PSNR   14.512 | Time   5.50
+
+[Train] Epoch   152 | Iter  46976 | Loss     0.3676 | Compute time     0.42 | Data time     3.25 
+[Train] Epoch   152 | Iter  47104 | Loss     0.2856 | Compute time     0.41 | Data time    59.59 
+[Train] Epoch   152 | Iter  47232 | Loss     0.3190 | Compute time     0.41 | Data time   116.39 
+[Valid] | Iter [ 128/ 136] | Loss     0.0641 | SSIM    0.250 | PSNR   14.208 | Time   4.77
+[Valid] | Done [ 133/ 136] | Loss     0.0666 | SSIM    0.256 | PSNR   14.507 | Time   4.99
+
+[Train] Epoch   153 | Iter  47360 | Loss     0.3529 | Compute time     0.41 | Data time    35.66 
+[Train] Epoch   153 | Iter  47488 | Loss     0.3418 | Compute time     0.48 | Data time    92.25 
+[Valid] | Iter [ 128/ 136] | Loss     0.0645 | SSIM    0.250 | PSNR   14.189 | Time   5.45
+[Valid] | Done [ 133/ 136] | Loss     0.0669 | SSIM    0.256 | PSNR   14.489 | Time   5.69
+
+[Train] Epoch   154 | Iter  47616 | Loss     0.2719 | Compute time     0.42 | Data time    12.92 
+[Train] Epoch   154 | Iter  47744 | Loss     0.4348 | Compute time     0.41 | Data time    69.69 
+[Train] Epoch   154 | Iter  47872 | Loss     0.3286 | Compute time     0.42 | Data time   126.34 
+[Valid] | Iter [ 128/ 136] | Loss     0.0641 | SSIM    0.250 | PSNR   14.207 | Time   4.93
+[Valid] | Done [ 133/ 136] | Loss     0.0666 | SSIM    0.256 | PSNR   14.504 | Time   5.15
+
+[Train] Epoch   155 | Iter  48000 | Loss     0.3703 | Compute time     0.41 | Data time    45.68 
+[Train] Epoch   155 | Iter  48128 | Loss     0.2872 | Compute time     0.39 | Data time   102.02 
+[Valid] | Iter [ 128/ 136] | Loss     0.0638 | SSIM    0.250 | PSNR   14.212 | Time   4.91
+[Valid] | Done [ 133/ 136] | Loss     0.0662 | SSIM    0.256 | PSNR   14.511 | Time   5.14
+
+[Train] Epoch   156 | Iter  48256 | Loss     0.3221 | Compute time     0.40 | Data time    22.90 
+[Train] Epoch   156 | Iter  48384 | Loss     0.3800 | Compute time     0.41 | Data time    79.39 
+[Train] Epoch   156 | Iter  48512 | Loss     0.3630 | Compute time     0.40 | Data time   135.38 
+[Valid] | Iter [ 128/ 136] | Loss     0.0638 | SSIM    0.250 | PSNR   14.215 | Time   4.99
+[Valid] | Done [ 133/ 136] | Loss     0.0663 | SSIM    0.256 | PSNR   14.513 | Time   5.34
+
+[Train] Epoch   157 | Iter  48640 | Loss     0.3620 | Compute time     0.41 | Data time    55.44 
+[Train] Epoch   157 | Iter  48768 | Loss     0.3453 | Compute time     0.40 | Data time   111.44 
+[Valid] | Iter [ 128/ 136] | Loss     0.0637 | SSIM    0.250 | PSNR   14.217 | Time   5.26
+[Valid] | Done [ 133/ 136] | Loss     0.0663 | SSIM    0.256 | PSNR   14.511 | Time   5.52
+
+[Train] Epoch   158 | Iter  48896 | Loss     0.3100 | Compute time     0.45 | Data time    32.39 
+[Train] Epoch   158 | Iter  49024 | Loss     0.3602 | Compute time     0.41 | Data time    89.25 
+[Valid] | Iter [ 128/ 136] | Loss     0.0639 | SSIM    0.250 | PSNR   14.203 | Time   5.50
+[Valid] | Done [ 133/ 136] | Loss     0.0665 | SSIM    0.256 | PSNR   14.500 | Time   5.75
+
+[Train] Epoch   159 | Iter  49152 | Loss     0.3423 | Compute time     0.41 | Data time     8.72 
+[Train] Epoch   159 | Iter  49280 | Loss     0.4237 | Compute time     0.40 | Data time    65.24 
+[Train] Epoch   159 | Iter  49408 | Loss     0.3263 | Compute time     0.45 | Data time   121.08 
+[Valid] | Iter [ 128/ 136] | Loss     0.0649 | SSIM    0.250 | PSNR   14.178 | Time   5.00
+[Valid] | Done [ 133/ 136] | Loss     0.0673 | SSIM    0.256 | PSNR   14.478 | Time   5.23
+
+[Train] Epoch   160 | Iter  49536 | Loss     0.3836 | Compute time     0.39 | Data time    42.14 
+[Train] Epoch   160 | Iter  49664 | Loss     0.3553 | Compute time     0.41 | Data time    98.43 
+[Valid] | Iter [ 128/ 136] | Loss     0.0642 | SSIM    0.250 | PSNR   14.209 | Time   4.78
+[Valid] | Done [ 133/ 136] | Loss     0.0668 | SSIM    0.256 | PSNR   14.505 | Time   5.06
+
+[Train] Epoch   161 | Iter  49792 | Loss     0.3647 | Compute time     0.41 | Data time    18.61 
+[Train] Epoch   161 | Iter  49920 | Loss     0.3272 | Compute time     0.45 | Data time    75.13 
+[Train] Epoch   161 | Iter  50048 | Loss     0.3241 | Compute time     0.46 | Data time   131.91 
+[Valid] | Iter [ 128/ 136] | Loss     0.0643 | SSIM    0.250 | PSNR   14.198 | Time   4.73
+[Valid] | Done [ 133/ 136] | Loss     0.0667 | SSIM    0.256 | PSNR   14.501 | Time   4.95
+

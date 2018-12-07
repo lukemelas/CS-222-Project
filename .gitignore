@@ -5,6 +5,7 @@
 
 data/
 save/
+checkpoints/
 luke_instructions.txt
 output/
 run.sh

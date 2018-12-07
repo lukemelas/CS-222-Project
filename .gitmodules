@@ -1,0 +1,3 @@
+[submodule "DepthAwareCNN"]
+	path = DepthAwareCNN
+	url = https://github.com/lukemelas/DepthAwareCNN

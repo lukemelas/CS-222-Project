@@ -1,3 +1,9 @@
 [submodule "DepthAwareCNN"]
-	path = DepthAwareCNN
+	path = old/DepthAwareCNN
 	url = https://github.com/lukemelas/DepthAwareCNN
+[submodule "DSSLIC"]
+	path = DSSLIC
+	url = https://github.com/lukemelas/DSSLIC
+[submodule "Deep-Image-Compression"]
+	path = Deep-Image-Compression
+	url = https://github.com/lukemelas/Deep-Image-Compression
